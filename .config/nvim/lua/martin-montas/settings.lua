@@ -2,29 +2,10 @@ local g = vim.g
 local o = vim.o
 
 
-
---vim.api.nvim_command([[
---augroup ChangeBackgroudColour
---
---autocmd colorscheme * :hi normal guibg=#101010
---augroup END
---]])
-
-
 vim.api.nvim_command('let g:vim_be_good_delete_me_offset = 35')
 vim.api.nvim_command('set jumpoptions+=view')
 vim.api.nvim_command('set nowrap')
 vim.api.nvim_command('filetype plugin indent on')
-vim.api.nvim_command('nnoremap <buffer> <leader>ba <cmd>ArduinoAttach<CR>')
-vim.api.nvim_command('nnoremap <buffer> <leader>bv <cmd>ArduinoVerify<CR>')
-vim.api.nvim_command('nnoremap <buffer> <leader>bu <cmd>ArduinoUpload<CR>')
-vim.api.nvim_command('nnoremap <buffer> <leader>bus <cmd>ArduinoUploadAndSerial<CR>')
-vim.api.nvim_command('nnoremap <buffer> <leader>bs <cmd>ArduinoSerial<CR>')
-vim.api.nvim_command('nnoremap <buffer> <leader>bb <cmd>ArduinoChooseBoard<CR>')
-vim.api.nvim_command('nnoremap <buffer> <leader>bp <cmd>ArduinoChooseProgrammer<CR>')
-
-
-
 
 o.termguicolors = true
 o.background = 'dark'
@@ -44,6 +25,7 @@ o.numberwidth = 5
 o.relativenumber = true
 o.signcolumn = 'yes:2'
 o.cursorline = true
+
 -- Better editing experience
 o.expandtab = true
 o.smarttab = true
@@ -83,7 +65,7 @@ vim.cmd.colorscheme('forest_stream')
 vim.api.nvim_command('highlight Search guifg=black guibg=yellow')
 vim.api.nvim_command('highlight IncSearch guifg=white guibg=red')
 vim.api.nvim_command('highlight Function gui=None')
--- vim.api.nvim_command('highlight LineNr guifg=#b0b0b0')
+vim.api.nvim_command('highlight LineNr guifg=#b0b0b0')
 vim.api.nvim_command('set nowrap')
 g.netrw_banner = 0
 g.netrw_liststyle = 3
@@ -98,13 +80,13 @@ g.mapleader = ' '
 g.maplocalleader = ' '
 
 vim.api.nvim_command('highlight StatusLine guibg=#838996 guifg=#333333')
+vim.api.nvim_command('highlight Normal guibg=#1C1A0D') 
 
 vim.api.nvim_create_autocmd('TextYankPost', {
     group = vim.api.nvim_create_augroup('highlight_yank', {}),
-    desc = 'Hightlight selection on yank',
+    desc = 'Highlight selection on yank',
     pattern = '*',
     callback = function()
         vim.highlight.on_yank { higroup = 'IncSearch', timeout = 150 }
     end,
 })
-vim.api.nvim_command('highlight Normal guibg=#0a0f14')

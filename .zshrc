@@ -11,7 +11,10 @@ export DOCKER_CONTENT_TRUST=1
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export LS_COLORS=$LS_COLORS:'di=30;41'
 export DOCKER_CONTENT_TRUST=0
-bindkey -M vicmd 'V' edit-command-line # this remaps `vv` to `V` (but overrides `visual-mode`)
+export EDITOR=nvim
+export VISUAL=nvim
+export PATH="$HOME/.emacs.d/bin:$PATH"
+export DOOMDIR="$HOME/.doom.d"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -77,7 +80,11 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize systemd zsh-autosuggestions ufw vi-mode)
+plugins=(git colorize systemd 
+    zsh-autosuggestions ufw 
+    debian
+    web-search
+    )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,6 +115,8 @@ source $ZSH/oh-my-zsh.sh
 # Enable vi mode
 bindkey -v
 alias vim='nvim'
+alias vi='nvim'
+alias em='emacs'
 alias v='nvim'
 alias ls='ls --color=auto' 
 alias l='ls --color=auto -la'
@@ -116,9 +125,12 @@ alias la='ls --color=auto -la'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME' 
 alias tm='tmux'
 alias ms='msfconsole'
-alias venv='source /home/bob/personal/python-project/sysadmin-projects/admin-scripts-env/bin/activate'
-alias sys='systemctl'
+alias venv='source /home/bob/personal/python/sysadmin-projects/admin-scripts-env/bin/activate'
 
+alias sys='systemctl'
+alias srx='web_search srx'
+
+ZSH_WEB_SEARCH_ENGINES=(srx "https://searx.be/search?q=")
 
 # Custom widget to paste from clipboard
 function zle-paste-clipboard() {
@@ -135,34 +147,12 @@ alias disablevm1="VBoxManage controlvm {276da368-9624-4b49-838c-4c57920caad1} sa
 alias startvm2="VBoxManage startvm {9b9f33f5-5405-4d82-b1f2-d1fad52fbc66} --type headless"
 alias disablevm2="VBoxManage controlvm {9b9f33f5-5405-4d82-b1f2-d1fad52fbc66} savestate" 
 
+alias startvm3="VBoxManage startvm {bf7b44e8-bb8a-4db4-ba0e-7f3a23f430b0} --type headless"
+alias disablevm3="VBoxManage controlvm {bf7b44e8-bb8a-4db4-ba0e-7f3a23f430b0} savestate" 
 
+alias startvm4="VBoxManage startvm  {75fd89d7-8224-4e3e-812e-95bf113ff1dc} --type headless"
 
-function edit-command-in-nvim {
-    # Temporarily save the current buffer to a file
-    local temp_file=$(mktemp)
-    print -r -- "$BUFFER" > "$temp_file"
-
-    # Open the temp file in Neovim
-    nvim "$temp_file"
-
-    # Read the file back into the buffer
-    BUFFER=$(<"$temp_file")
-
-    # Clean up the temporary file
-    rm "$temp_file"
-
-    # Reset the cursor position
-    CURSOR=${#BUFFER}
-    zle redisplay
-}
-
-# Ensure vi-mode plugin keybindings are loaded
-bindkey -v
-
-# Set the 'vv' binding to use Neovim
-zle -N edit-command-in-nvim
-bindkey -M vicmd 'vv' edit-command-in-nvim
-
+alias disablevm4="VBoxManage controlvm {75fd89d7-8224-4e3e-812e-95bf113ff1dc}  savestate" 
 
 function f() {
     local DIR
@@ -178,8 +168,5 @@ function fv() {
     tmux new-window -n $WINDOW_NAME \; send-keys 'DIR=$(find . -type d | fzf); cd "$DIR" || return 1; nvim .' C-m
 }
 
-if [[ $TERM_PROGRAM == "alacritty" ]]; then
-    xset r rate 200 30
-fi
 fastfetch
 eval "$(starship init zsh)"

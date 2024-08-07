@@ -65,7 +65,7 @@ floating_modifier $mod
 bindsym $mod+Return exec /usr/bin/alacritty -o font.size=17
 
 # start the browser
-bindsym $mod+b exec google-chrome
+bindsym $mod+b exec firefox
 
 
 set $fn eDP-1
@@ -223,15 +223,18 @@ bar {
 }
 ######### gaps
 
-#gaps inner 10px
+gaps inner 20px
 
 # Configure an additional 5px of extra space to the screen edges,
 # for a total gap of 10px to the screen edges, and 5px between windows.
 #gaps outer 5px
 
-
+input type:keyboard {
+    repeat_delay 300
+    repeat_rate 50
+}
 exec --no-startup-id dunst
-output * bg /home/bob/Pictures/color-river.jpg fill
+output * bg /home/bob/personal/ryiin-c-t7w4NnjOwDk-unsplash.jpg fill
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

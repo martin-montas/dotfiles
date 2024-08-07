@@ -1,7 +1,15 @@
-vim.cmd [[packadd packer.nvim]]
+ vim.cmd [[packadd packer.nvim]]
 return require("packer").startup(function(use)
     use('wbthomason/packer.nvim')
-    use ('nvim-treesitter/nvim-treesitter', {run =  ':TSUpdate'})
+
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
+    use "lukas-reineke/indent-blankline.nvim"    
     use({
         "folke/trouble.nvim",
         config = function()
@@ -10,10 +18,9 @@ return require("packer").startup(function(use)
             }
         end
     })
+
     use("tpope/vim-fugitive")
     use 'rockerBOO/boo-colorscheme-nvim'
-    use "tjdevries/colorbuddy.nvim"
-
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.6',
         requires = { {'nvim-lua/plenary.nvim'} }
@@ -48,6 +55,12 @@ return require("packer").startup(function(use)
               {'rafamadriz/friendly-snippets'},
           }
       }
+      use "lukas-reineke/indent-blankline.nvim"
       use 'Exafunction/codeium.vim'
-      use 'stevearc/vim-arduino'
-  end)
+
+      -- Put this at the end after all plugins
+  if packer_bootstrap then
+    require('packer').sync()
+  end
+end)
+
