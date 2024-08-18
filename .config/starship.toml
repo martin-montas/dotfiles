@@ -1,0 +1,89 @@
+# ~/.config/starship.toml
+
+# Use custom format
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+[character]
+success_symbol = "[OK](bold green)"
+error_symbol = "[ERROR](bold red)"
+
+# Define custom colors
+[palettes.foo]
+
+# Overwrite existing color
+blue = '21'
+
+[hostname]
+disabled = false
+format = "[$HOST](bold dimmed green) in"
+style = "bold dimmed green"
+
+[line_break]
+disabled = true
+
+[memory_usage]
+disabled = false
+threshold = -1
+symbol = ' '
+style = 'bold dimmed green'
+
+[container]
+format = '[$symbol \[$name\]]($style) '
+
+# Disable the Go language module
+[golang]
+disabled = true
+
+# Disable the JavaScript/Node.js module
+[nodejs]
+disabled = true
+
+# Disable the Python module
+[python]
+disabled = true
+
+# Disable the Rust module
+[rust]
+disabled = true
+
+# Disable the Java module
+[java]
+disabled = true
+
+# Disable the Ruby module
+[ruby]
+disabled = true
+
+# Disable the PHP module
+[php]
+disabled = true
+
+# Disable the Swift module
+[swift]
+disabled = true
+
+# Disable the C# module
+[dotnet]
+disabled = true
+
+# Disable the Perl module
+[perl]
+disabled = true
+
+# Disable the Haskell module
+[haskell]
+disabled = true
+
+# Disable the c module
+[c]
+disabled = true
+
+# Disable the Lua module
+[lua]
+disabled = true
+
