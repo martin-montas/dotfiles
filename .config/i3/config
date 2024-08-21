@@ -236,6 +236,7 @@ exec_always --no-startup-id xset r rate 310 50
 # finds out, if available)
 client.focused          #2e3436 #2e3436 #ffffff #2e3436   #2e3436
 exec_always --no-startup-id feh --bg-fill $HOME/personal/highway.jpg
+# exec --no-startup-id /home/william/personal/backup_daily.sh
 
 
 

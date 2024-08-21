@@ -155,4 +155,3 @@ function fv() {
 }
 
 eval "$(starship init zsh)"
-

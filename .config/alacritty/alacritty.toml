@@ -36,7 +36,7 @@ live_config_reload = true
 
 # ipc_socket = true
 
-
+#[shell]
 # SHELL
 # shell = "<string>" | { program = "<string>", args = ["<string>",] }
 # You can set shell.program to the path of your favorite shell, e.g. /bin/zsh. Entries in shell.args are passed as arguments to the shell.
@@ -56,9 +56,8 @@ live_config_reload = true
 # args = ["-l"]
 
 [shell]
-program = "/usr/bin/zsh"
-args = ["-l"]
-
+program = "/usr/bin/tmux"
+#args = ["new-session", "-A", "-s", "mysession"]
 
 # ENV
 # All key-value pairs in the [env] section will be added as environment variables for any process spawned by Alacritty, including its shell. Some entries may override variables set by alacritty itself.
@@ -338,38 +337,42 @@ end = { foreground = "#181818", background = "#ac4242" }
 # Dark Pride
 # A dark trans pride colour inspired theme
 
-# Primary colors
+# github Alacritty Colors
+
+# Default colors
 [colors.primary]
-background = '#0d0d1b'
-foreground = '#ccccce'
+background = '#0d1117'
+foreground = '#b3b1ad'
 
-# Colors used for 'custom_cursor_colors'
-[colors.cursor]
-text = '#bbbbbb'
-cursor = '#ff0017'
-
-# Colors 0 through 7
+# Normal colors
 [colors.normal]
-black = '#282828'
-red = '#ca1444'
-green = '#789aba'
-yellow = '#b3879f'
-blue = '#95569b'
-magenta = '#cb6fa1'
-cyan = '#fb6e93'
-white = '#cf98c1'
+black   = '#484f58'
+red     = '#ff7b72'
+green   = '#3fb950'
+yellow  = '#d29922'
+blue    = '#58a6ff'
+magenta = '#bc8cff'
+cyan    = '#39c5cf'
+white   = '#b1bac4'
 
-# Colors 8 through 15
+# Bright colors
 [colors.bright]
-black = '#98218e'
-red = '#cb515d'
-green = '#5a87b1'
-yellow = '#9c61ab'
-blue = '#9a77b1'
-magenta = '#f2a297'
-cyan = '#f4436f'
-white = '#ebdbb2'
+black   = '#6e7681'
+red     = '#ffa198'
+green   = '#56d364'
+yellow  = '#e3b341'
+blue    = '#79c0ff'
+magenta = '#d2a8ff'
+cyan    = '#56d4dd'
+white   = '#f0f6fc'
 
+[[colors.indexed_colors]]
+index = 16
+color = '#d18616'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#ffa198'
 # BELL
 # This section documents the [bell] table of the configuration file.
 
