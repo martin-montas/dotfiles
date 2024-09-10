@@ -339,32 +339,39 @@ end = { foreground = "#181818", background = "#ac4242" }
 
 # github Alacritty Colors
 
-# Default colors
+# Colors (Alabaster)
+# author tonsky
+
+# Colors (Alabaster Dark)
+# author tonsky
+
 [colors.primary]
-background = '#0d1117'
-foreground = '#b3b1ad'
+background = '#0E1415'
+foreground = '#CECECE'
 
-# Normal colors
+[colors.cursor]
+text = '#0E1415'
+cursor = '#CECECE'
+
 [colors.normal]
-black   = '#484f58'
-red     = '#ff7b72'
-green   = '#3fb950'
-yellow  = '#d29922'
-blue    = '#58a6ff'
-magenta = '#bc8cff'
-cyan    = '#39c5cf'
-white   = '#b1bac4'
+black = '#0E1415'
+red = '#e25d56'
+green = '#73ca50'
+yellow = '#e9bf57'
+blue = '#4a88e4'
+magenta = '#915caf'
+cyan = '#23acdd'
+white = '#f0f0f0'
 
-# Bright colors
 [colors.bright]
-black   = '#6e7681'
-red     = '#ffa198'
-green   = '#56d364'
-yellow  = '#e3b341'
-blue    = '#79c0ff'
-magenta = '#d2a8ff'
-cyan    = '#56d4dd'
-white   = '#f0f6fc'
+black = '#777777'
+red = '#f36868'
+green = '#88db3f'
+yellow = '#f0bf7a'
+blue = '#6f8fdb'
+magenta = '#e987e9'
+cyan = '#4ac9e2'
+white = '#FFFFFF'
 
 [[colors.indexed_colors]]
 index = 16

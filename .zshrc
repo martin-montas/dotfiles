@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export ZSH="$HOME/.oh-my-zsh"
 export PATH=/usr/sbin/:$PATH
 export PATH=
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
@@ -19,6 +20,8 @@ ZSH_THEME="wuffers"
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -128,17 +131,8 @@ function zle-paste-clipboard() {
 zle -N zle-paste-clipboard
 bindkey -M vicmd 'p' zle-paste-clipboard
 
-alias startvm1="VBoxManage startvm {276da368-9624-4b49-838c-4c57920caad1} --type headless" 
-alias disablevm1="VBoxManage controlvm {276da368-9624-4b49-838c-4c57920caad1} savestate" 
-
-alias startvm2="VBoxManage startvm {9b9f33f5-5405-4d82-b1f2-d1fad52fbc66} --type headless"
-alias disablevm2="VBoxManage controlvm {9b9f33f5-5405-4d82-b1f2-d1fad52fbc66} savestate" 
-
-alias startvm3="VBoxManage startvm {bf7b44e8-bb8a-4db4-ba0e-7f3a23f430b0} --type headless"
-alias disablevm3="VBoxManage controlvm {bf7b44e8-bb8a-4db4-ba0e-7f3a23f430b0} savestate" 
-
-alias startvm4="VBoxManage startvm  {75fd89d7-8224-4e3e-812e-95bf113ff1dc} --type headless"
-alias disablevm4="VBoxManage controlvm {75fd89d7-8224-4e3e-812e-95bf113ff1dc}  savestate" 
+alias startvm2="VBoxManage startvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} --type headless" 
+alias disablevm2="VBoxManage controlvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} savestate" 
 
 function f() {
     local DIR
