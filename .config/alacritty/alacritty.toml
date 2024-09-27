@@ -497,7 +497,7 @@ thickness = 0.15
 # ]
 
 [mouse]
-hide_when_typing = false
+hide_when_typing = true
 
 
 # HINTS

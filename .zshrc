@@ -131,6 +131,7 @@ function zle-paste-clipboard() {
 zle -N zle-paste-clipboard
 bindkey -M vicmd 'p' zle-paste-clipboard
 
+
 alias startvm2="VBoxManage startvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} --type headless" 
 alias disablevm2="VBoxManage controlvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} savestate" 
 
