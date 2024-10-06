@@ -20,7 +20,7 @@ ZSH_THEME="wuffers"
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
