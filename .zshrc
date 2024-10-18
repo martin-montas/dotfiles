@@ -150,4 +150,4 @@ function fv() {
 }
 
 eval "$(starship init zsh)"
-fortune | cowsay -s
+fortune | cowsay 
