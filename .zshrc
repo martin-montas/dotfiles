@@ -132,8 +132,18 @@ zle -N zle-paste-clipboard
 bindkey -M vicmd 'p' zle-paste-clipboard
 
 
+alias startvm1="VBoxManage startvm {455b1447-605f-4ab7-b570-a5e0de8d5256} -type headless" 
+alias disablevm1="VBoxManage controlvm {455b1447-605f-4ab7-b570-a5e0de8d5256} savestate" 
+
 alias startvm2="VBoxManage startvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} --type headless" 
 alias disablevm2="VBoxManage controlvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} savestate" 
+
+alias startvm3="VBoxManage startvm {6b906888-7e1f-4b03-8c9a-e3a35bc58c1f} --type headless" 
+alias disablevm3="VBoxManage controlvm {6b906888-7e1f-4b03-8c9a-e3a35bc58c1f} savestate" 
+
+alias current_vm_start="VBoxManage startvm {326f5a9a-8055-4dfc-903d-5f8f11c0ab51} --type headless"
+alias current_vm_end="VBoxManage controlvm {326f5a9a-8055-4dfc-903d-5f8f11c0ab51} savestate"
+
 
 function f() {
     local DIR
