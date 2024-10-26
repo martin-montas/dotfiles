@@ -230,8 +230,8 @@ multiplier = 3
 # Default: true
 
 [font]
-normal = { family = "Hack", style = "Bold" }
-size = 14
+normal = { family = "DejaVu Sans Mono", style = "Bold" }
+size = 10
 builtin_box_drawing = true 
 
 # COLORS
@@ -347,7 +347,7 @@ end = { foreground = "#181818", background = "#ac4242" }
 
 [colors.primary]
 background = '#0E1415'
-foreground = '#CECECE'
+foreground = '#84c137'
 
 [colors.cursor]
 text = '#0E1415'
