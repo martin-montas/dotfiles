@@ -8,19 +8,22 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export PATH=:/home/william//bin:/usr/sbin/:/home/william/bin:/usr/sbin/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games/
 export DOCKER_CONTENT_TRUST=1
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
-export LS_COLORS=$LS_COLORS:'di=30;41'
+#export LS_COLORS=$LS_COLORS:'di=30;41'
 export DOCKER_CONTENT_TRUST=0
 export EDITOR=nvim
 export VISUAL=nvim
 export PATH="$HOME/.emacs.d/bin:$PATH"
-ZSH_THEME="wuffers"
+ZSH_THEME="alanpeabody"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+    git zsh-autosuggestions zsh-syntax-highlighting
+    systemd
+)
 source $ZSH/oh-my-zsh.sh
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -108,10 +111,10 @@ alias vim='nvim'
 alias vi='nvim'
 alias em='emacsclient -c -a ""'
 alias v='nvim'
-alias ls='ls --color=auto' 
-alias l='ls --color=auto -la'
-alias ll='ls --color=auto -l'
-alias la='ls --color=auto -la'
+alias ls='ls --color=never' 
+alias l='ls --color=never -la'
+alias ll='ls --color=never -l'
+alias la='ls --color=never -la'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
 alias tm='tmux'
 alias ms='msfconsole'
@@ -141,8 +144,8 @@ alias disablevm2="VBoxManage controlvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} sa
 alias startvm3="VBoxManage startvm {6b906888-7e1f-4b03-8c9a-e3a35bc58c1f} --type headless" 
 alias disablevm3="VBoxManage controlvm {6b906888-7e1f-4b03-8c9a-e3a35bc58c1f} savestate" 
 
-alias current_vm_start="VBoxManage startvm {326f5a9a-8055-4dfc-903d-5f8f11c0ab51} --type headless"
-alias current_vm_end="VBoxManage controlvm {326f5a9a-8055-4dfc-903d-5f8f11c0ab51} savestate"
+alias current_vm_start="VBoxManage startvm {36e6dc2d-2a74-4292-a140-c9c7825cc352} --type headless"
+alias current_vm_end="VBoxManage controlvm {36e6dc2d-2a74-4292-a140-c9c7825cc352} savestate"
 
 
 function f() {
@@ -151,13 +154,6 @@ function f() {
     cd "$DIR" || return 1
 }
 
-function fv() {
-    # Generate a unique name based on timestamp
-    WINDOW_NAME=PROJECT:$(date +%s)
 
-    # Create a new window with a unique name and run the command
-    tmux new-window -n $WINDOW_NAME \; send-keys 'DIR=$(find . -type d | fzf); cd "$DIR" || return 1; nvim .' C-m
-}
-
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
 fortune | cowsay 
