@@ -8,7 +8,7 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export PATH=:/home/william//bin:/usr/sbin/:/home/william/bin:/usr/sbin/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games/
 export DOCKER_CONTENT_TRUST=1
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
-#export LS_COLORS=$LS_COLORS:'di=30;41'
+export LS_COLORS=$LS_COLORS:'di=30;41'
 export DOCKER_CONTENT_TRUST=0
 export EDITOR=nvim
 export VISUAL=nvim
@@ -111,10 +111,10 @@ alias vim='nvim'
 alias vi='nvim'
 alias em='emacsclient -c -a ""'
 alias v='nvim'
-alias ls='ls --color=never' 
-alias l='ls --color=never -la'
-alias ll='ls --color=never -l'
-alias la='ls --color=never -la'
+alias ls='ls --color=auto' 
+alias l='ls --color=auto -la'
+alias ll='ls --color=auto -l'
+alias la='ls --color=auto -la'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
 alias tm='tmux'
 alias ms='msfconsole'

@@ -225,7 +225,7 @@ bar {
 gaps inner 18px
 
 
-exec_always xset r rate 320 50
+
 # Configure an additional 5px of extra space to the screen edges,
 # for a total gap of 10px to the screen edges, and 5px between windows.
 
@@ -239,4 +239,4 @@ exec_always --no-startup-id feh --bg-fill $HOME/personal/highway.jpg
 
 # i3 lock for when closing the laptop
 exec_always --no-startup-id /$HOME/.config/i3/lock-every-30-mins.sh
-
+exec_always --no-startup-id xset r rate 320 50

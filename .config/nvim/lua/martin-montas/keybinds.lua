@@ -6,6 +6,10 @@ end
 --
 --
 --
+
+vim.keymap.set("n", "}", ":keepjumps normal! }<CR>")
+vim.keymap.set("n", "{", ":keepjumps normal! {<CR>")
+
 map('n', '<leader>w', ':w<CR>')
 map('n', '<leader>q', ':q!<CR>')
 
@@ -36,7 +40,7 @@ vim.keymap.set("n", "-", ":Ex<CR>", { desc = "Open parent directory" })
 map('v','J', ":m '>+1<CR>gv=gv")
 map('v','K', ":m '>-2<CR>gv=gv")
 
-vim.keymap.set("n", "<leader>m", ":Trouble diagnostics<CR>",
+vim.keymap.set("n", "<leader>m", ":TroubleToggle<CR>",
   {silent = true, noremap = true}
 )
 vim.keymap.set('i', '<C-l>', function() return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
