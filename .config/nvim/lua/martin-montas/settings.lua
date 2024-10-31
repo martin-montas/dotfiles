@@ -90,3 +90,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
         vim.highlight.on_yank { higroup = 'IncSearch', timeout = 150 }
     end,
 })
+
+
+
+-- Disable Caps Lock in normal, insert, and visual modes
+vim.api.nvim_set_keymap('n', '<CapsLock>', '<Nop>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<CapsLock>', '<Nop>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<CapsLock>', '<Nop>', { noremap = true, silent = true })

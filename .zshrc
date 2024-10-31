@@ -148,6 +148,9 @@ alias current_vm_start="VBoxManage startvm {36e6dc2d-2a74-4292-a140-c9c7825cc352
 alias current_vm_end="VBoxManage controlvm {36e6dc2d-2a74-4292-a140-c9c7825cc352} savestate"
 
 
+# disables caps lock for nvim
+setxkbmap -option caps:escape
+
 function f() {
     local DIR
     DIR=$(find . -type d | fzf)
@@ -157,3 +160,4 @@ function f() {
 
 #eval "$(starship init zsh)"
 fortune | cowsay 
+
