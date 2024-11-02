@@ -6,7 +6,6 @@ vim.api.nvim_command('let g:vim_be_good_delete_me_offset = 35')
 vim.api.nvim_command('set jumpoptions+=view')
 vim.api.nvim_command('set nowrap')
 vim.api.nvim_command('filetype plugin indent on')
-
 o.termguicolors = true
 o.background = 'dark'
 --vim.api.nvim_command('set colorcolumn=85')

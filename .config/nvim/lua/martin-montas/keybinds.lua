@@ -10,6 +10,7 @@ end
 vim.keymap.set("n", "}", ":keepjumps normal! }<CR>")
 vim.keymap.set("n", "{", ":keepjumps normal! {<CR>")
 
+vim.keymap.set('n', "<C-c>", ":CodeiumDisable<CR>")
 map('n', '<leader>w', ':w<CR>')
 map('n', '<leader>q', ':q!<CR>')
 
@@ -47,4 +48,3 @@ vim.keymap.set('i', '<C-l>', function() return vim.fn['codeium#Accept']() end, {
 vim.keymap.set('i', '<C-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
 vim.keymap.set('i', '<C-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
 vim.keymap.set('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
-

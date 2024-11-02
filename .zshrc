@@ -3,7 +3,6 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=/usr/sbin/:$PATH
-export PATH=
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export PATH=:/home/william//bin:/usr/sbin/:/home/william/bin:/usr/sbin/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games/
 export DOCKER_CONTENT_TRUST=1
@@ -12,8 +11,8 @@ export LS_COLORS=$LS_COLORS:'di=30;41'
 export DOCKER_CONTENT_TRUST=0
 export EDITOR=nvim
 export VISUAL=nvim
-export PATH="$HOME/.emacs.d/bin:$PATH"
-ZSH_THEME="alanpeabody"
+export PATH=$PATH:~/go/bin
+ZSH_THEME="robbyrussell"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -158,6 +157,6 @@ function f() {
 }
 
 
-#eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 fortune | cowsay 
 
