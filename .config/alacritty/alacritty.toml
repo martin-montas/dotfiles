@@ -230,7 +230,7 @@ multiplier = 3
 # Default: true
 
 [font]
-normal = { family = "DejaVu Sans Mono", style = "Bold" }
+normal = { family = "Hack", style = "Bold" }
 size = 10
 builtin_box_drawing = true 
 
