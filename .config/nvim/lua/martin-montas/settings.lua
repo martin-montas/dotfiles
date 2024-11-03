@@ -67,7 +67,7 @@ vim.api.nvim_command('highlight Function gui=None')
 vim.api.nvim_command('highlight LineNr guifg=#b0b0b0')
 vim.api.nvim_command('set nowrap')
 g.netrw_banner = 0
-g.netrw_liststyle = 3
+g.netrw_liststyle = 0
 g.netrw_browse_split = 0
 g.netrw_altv = 1
 g.netrw_winsize = 12

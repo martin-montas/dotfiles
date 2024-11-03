@@ -133,6 +133,8 @@ function zle-paste-clipboard() {
 zle -N zle-paste-clipboard
 bindkey -M vicmd 'p' zle-paste-clipboard
 
+# makes the terminal faster 
+xset r rate 320 50
 
 alias startvm1="VBoxManage startvm {455b1447-605f-4ab7-b570-a5e0de8d5256} -type headless" 
 alias disablevm1="VBoxManage controlvm {455b1447-605f-4ab7-b570-a5e0de8d5256} savestate" 
@@ -143,8 +145,8 @@ alias disablevm2="VBoxManage controlvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} sa
 alias startvm3="VBoxManage startvm {6b906888-7e1f-4b03-8c9a-e3a35bc58c1f} --type headless" 
 alias disablevm3="VBoxManage controlvm {6b906888-7e1f-4b03-8c9a-e3a35bc58c1f} savestate" 
 
-alias current_vm_start="VBoxManage startvm {36e6dc2d-2a74-4292-a140-c9c7825cc352} --type headless"
-alias current_vm_end="VBoxManage controlvm {36e6dc2d-2a74-4292-a140-c9c7825cc352} savestate"
+alias vulnvm_start="VBoxManage startvm {36e6dc2d-2a74-4292-a140-c9c7825cc352} --type headless"
+alias vulnvm_disable="VBoxManage controlvm {36e6dc2d-2a74-4292-a140-c9c7825cc352} savestate"
 
 
 # disables caps lock for nvim
