@@ -10,6 +10,7 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export LS_COLORS=$LS_COLORS:'di=30;41'
 export DOCKER_CONTENT_TRUST=0
 export EDITOR=nvim
+export GOPATH=$HOME/go
 export VISUAL=nvim
 export PATH=$PATH:~/go/bin
 ZSH_THEME="robbyrussell"
@@ -118,6 +119,7 @@ alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias tm='tmux'
 alias ms='msfconsole'
 alias venv='source /home/william/personal/python/sysadmin-projects/admin-scripts-env/bin/activate'
+alias t='tgpt'
 
 alias sys='systemctl'
 alias srx='web_search srx'
@@ -150,7 +152,7 @@ alias vulnvm_disable="VBoxManage controlvm {36e6dc2d-2a74-4292-a140-c9c7825cc352
 
 
 # disables caps lock for nvim
-setxkbmap -option caps:escape
+setxkbmap -option :escape
 
 function f() {
     local DIR
