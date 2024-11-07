@@ -144,11 +144,8 @@ alias disablevm1="VBoxManage controlvm {455b1447-605f-4ab7-b570-a5e0de8d5256} sa
 alias startvm2="VBoxManage startvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} --type headless" 
 alias disablevm2="VBoxManage controlvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} savestate" 
 
-alias startvm3="VBoxManage startvm {6b906888-7e1f-4b03-8c9a-e3a35bc58c1f} --type headless" 
-alias disablevm3="VBoxManage controlvm {6b906888-7e1f-4b03-8c9a-e3a35bc58c1f} savestate" 
-
-alias vulnvm_start="VBoxManage startvm {36e6dc2d-2a74-4292-a140-c9c7825cc352} --type headless"
-alias vulnvm_disable="VBoxManage controlvm {36e6dc2d-2a74-4292-a140-c9c7825cc352} savestate"
+alias startserver="VBoxManage startvm {5954f299-79b9-4201-9ccc-5fdf69e09b3c} --type headless" 
+alias disableserver="VBoxManage controlvm {5954f299-79b9-4201-9ccc-5fdf69e09b3c} savestate" 
 
 
 # disables caps lock for nvim
