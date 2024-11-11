@@ -118,7 +118,7 @@ alias la='ls --color=auto -la'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
 alias tm='tmux'
 alias ms='msfconsole'
-alias venv='source /home/william/personal/python/sysadmin-projects/admin-scripts-env/bin/activate'
+alias ansibleenv='source $HOME/python-env/bin/activate'
 alias t='tgpt'
 
 alias sys='systemctl'
@@ -137,9 +137,8 @@ bindkey -M vicmd 'p' zle-paste-clipboard
 
 # makes the terminal faster 
 xset r rate 320 50
-
-alias startvm1="VBoxManage startvm {455b1447-605f-4ab7-b570-a5e0de8d5256} -type headless" 
-alias disablevm1="VBoxManage controlvm {455b1447-605f-4ab7-b570-a5e0de8d5256} savestate" 
+alias normalenable="VBoxManage startvm {455b1447-605f-4ab7-b570-a5e0de8d5256} -type headless" 
+alias normaldisable="VBoxManage controlvm {455b1447-605f-4ab7-b570-a5e0de8d5256} savestate" 
 
 alias startvm2="VBoxManage startvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} --type headless" 
 alias disablevm2="VBoxManage controlvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} savestate" 
@@ -147,6 +146,8 @@ alias disablevm2="VBoxManage controlvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} sa
 alias startserver="VBoxManage startvm {5954f299-79b9-4201-9ccc-5fdf69e09b3c} --type headless" 
 alias disableserver="VBoxManage controlvm {5954f299-79b9-4201-9ccc-5fdf69e09b3c} savestate" 
 
+alias vulnvmen="VBoxManage startvm {8af78b98-5484-4515-b4f4-b633061000f8} --type headless" 
+alias vulnvmdis="VBoxManage controlvm {8af78b98-5484-4515-b4f4-b633061000f8} savestate" 
 
 # disables caps lock for nvim
 setxkbmap -option :escape
@@ -158,6 +159,4 @@ function f() {
 }
 
 
-# eval "$(starship init zsh)"
 fortune | cowsay 
-
