@@ -1,7 +1,6 @@
 local g = vim.g
 local o = vim.o
 
-
 vim.api.nvim_command('let g:vim_be_good_delete_me_offset = 35')
 vim.api.nvim_command('set jumpoptions+=view')
 vim.api.nvim_command('set nowrap')
@@ -79,7 +78,7 @@ o.splitbelow = true
 g.do_filetype_lua = 1
 g.mapleader = ' '
 g.maplocalleader = ' '
-
+vim.g.codeium_enabled = false
 vim.api.nvim_command('highlight StatusLine guibg=#838996 guifg=#333333')
 vim.api.nvim_command('highlight Normal guibg=#1C1A0D') 
 
@@ -92,7 +91,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     end,
 })
 
--- Disable Caps Lock in normal, insert, and visual modes
-vim.api.nvim_set_keymap('n', '<CapsLock>', '<Nop>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<CapsLock>', '<Nop>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<CapsLock>', '<Nop>', { noremap = true, silent = true })

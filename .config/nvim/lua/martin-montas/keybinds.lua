@@ -2,11 +2,6 @@ local function map(m, k, v)
     vim.keymap.set(m, k, v, { silent = false })
 end
 
--- Fix n and N. Keeping foobar in center
---
---
---
-
 vim.keymap.set("n", "}", ":keepjumps normal! }<CR>")
 vim.keymap.set("n", "{", ":keepjumps normal! {<CR>")
 
