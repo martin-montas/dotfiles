@@ -40,7 +40,10 @@ map('v','K', ":m '>-2<CR>gv=gv")
 vim.keymap.set("n", "<leader>m", ":Trouble diagnostics<CR>",
   {silent = true, noremap = true}
 )
+vim.keymap.set('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
 vim.keymap.set('i', '<C-l>', function() return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
 vim.keymap.set('i', '<C-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
 vim.keymap.set('i', '<C-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
-vim.keymap.set('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+
+vim.keymap.set('c', '<C-l>', "<C-Right>")
+vim.keymap.set('c', '<C-h>', "<C-Left>")
