@@ -38,7 +38,7 @@ map('v','J', ":m '>+1<CR>gv=gv")
 map('v','K', ":m '>-2<CR>gv=gv")
 
 vim.keymap.set("n", "<leader>m", ":Trouble diagnostics<CR>",
-  {silent = true, noremap = true}
+ {silent = true, noremap = true}
 )
 vim.keymap.set('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
 vim.keymap.set('i', '<C-l>', function() return vim.fn['codeium#Accept']() end, { expr = true, silent = true })

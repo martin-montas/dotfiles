@@ -7,7 +7,7 @@ export GOPATH=$HOME/go
 export PATH=/usr/sbin/:$PATH
 export PATH=:/home/william//bin:/usr/sbin/:/home/william/bin:/usr/sbin/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games/
 export PATH=$PATH:~/go/bin
-export PATH=$PATH:~/platform-tools/
+export PATH=$PATH:~/platform-tools:~/python-env/bin
 
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export DOCKER_CONTENT_TRUST=1
