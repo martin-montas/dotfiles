@@ -135,8 +135,8 @@ bindkey -M vicmd 'p' zle-paste-clipboard
 
 # makes the terminal faster 
 xset r rate 320 50
-alias normalenable="VBoxManage startvm {455b1447-605f-4ab7-b570-a5e0de8d5256} -type headless" 
-alias normaldisable="VBoxManage controlvm {455b1447-605f-4ab7-b570-a5e0de8d5256} savestate" 
+alias startvm="VBoxManage startvm {455b1447-605f-4ab7-b570-a5e0de8d5256} -type gui" 
+alias disvm="VBoxManage controlvm {455b1447-605f-4ab7-b570-a5e0de8d5256} savestate" 
 
 alias startvm2="VBoxManage startvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} --type headless" 
 alias disablevm2="VBoxManage controlvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} savestate" 
@@ -144,8 +144,8 @@ alias disablevm2="VBoxManage controlvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} sa
 alias startserver="VBoxManage startvm {5954f299-79b9-4201-9ccc-5fdf69e09b3c} --type headless" 
 alias disableserver="VBoxManage controlvm {5954f299-79b9-4201-9ccc-5fdf69e09b3c} savestate" 
 
-alias vulnvmen="VBoxManage startvm {47a26e5a-eb6e-4aa1-b47b-586b7ab9543b} --type headless" 
-alias vulnvmdis="VBoxManage controlvm {47a26e5a-eb6e-4aa1-b47b-586b7ab9543b} savestate" 
+alias vulnvmen="VBoxManage startvm {a9503342-c811-43d1-956b-2c17a7ddc937} --type headless" 
+alias vulnvmdis="VBoxManage controlvm {a9503342-c811-43d1-956b-2c17a7ddc937} savestate" 
 
 # disables caps lock for nvim
 setxkbmap -option :escape

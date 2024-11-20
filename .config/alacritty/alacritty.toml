@@ -231,7 +231,7 @@ multiplier = 3
 
 [font]
 normal = { family = "Hack", style = "Bold" }
-size = 10
+size = 12
 builtin_box_drawing = true 
 
 # COLORS
