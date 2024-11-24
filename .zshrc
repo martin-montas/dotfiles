@@ -21,6 +21,10 @@ ZSH_THEME="robbyrussell"
 plugins=(
     git zsh-autosuggestions zsh-syntax-highlighting
     systemd
+    git
+    ansible
+    web-search
+
 )
 source $ZSH/oh-my-zsh.sh
 # Uncomment the following line to use case-sensitive completion.
@@ -107,7 +111,6 @@ ENABLE_CORRECTION="true"
 bindkey -v
 alias vim='nvim'
 alias vi='nvim'
-alias em='emacsclient -c -a ""'
 alias v='nvim'
 alias ls='ls --color=auto' 
 alias l='ls --color=auto -la'
@@ -118,11 +121,12 @@ alias tm='tmux'
 alias ms='msfconsole'
 alias ansibleenv='source $HOME/python-env/bin/activate'
 alias t='tgpt'
+alias zap='zaproxy 1>/dev/null &'
+alias server='python3 -m http.server'
 
 alias sys='systemctl'
-alias srx='web_search srx'
+alias want='web_search qwant'
 
-ZSH_WEB_SEARCH_ENGINES=(srx "https://searx.be/search?q=")
 
 # Custom widget to paste from clipboard
 function zle-paste-clipboard() {
@@ -138,8 +142,8 @@ xset r rate 320 50
 alias startvm="VBoxManage startvm {455b1447-605f-4ab7-b570-a5e0de8d5256} -type gui" 
 alias disvm="VBoxManage controlvm {455b1447-605f-4ab7-b570-a5e0de8d5256} savestate" 
 
-alias startvm2="VBoxManage startvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} --type headless" 
-alias disablevm2="VBoxManage controlvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} savestate" 
+alias metaenable="VBoxManage startvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} --type headless" 
+alias metadisable="VBoxManage controlvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} savestate" 
 
 alias startserver="VBoxManage startvm {5954f299-79b9-4201-9ccc-5fdf69e09b3c} --type headless"
 alias disableserver="VBoxManage controlvm {5954f299-79b9-4201-9ccc-5fdf69e09b3c} savestate"
