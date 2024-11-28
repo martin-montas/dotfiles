@@ -59,7 +59,7 @@ o.swapfile = false
 
 -- Remember 50 items in commandline history
 o.history = 50
-vim.cmd.colorscheme('forest_stream')
+vim.cmd.colorscheme('pablo')
 --vim.api.nvim_command('highlight Comment guibg=#333333 guifg=#b58900')
 vim.api.nvim_command('highlight Search guifg=black guibg=yellow')
 vim.api.nvim_command('highlight IncSearch guibg=#ffffff')
@@ -72,6 +72,7 @@ g.netrw_liststyle = 0
 g.netrw_browse_split = 0
 g.netrw_altv = 1
 g.netrw_winsize = 12
+
 -- Better buffer splitting
 o.splitright = true
 o.splitbelow = true

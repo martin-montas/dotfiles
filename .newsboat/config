@@ -1,0 +1,27 @@
+
+browser "w3m"
+
+
+color info white red
+color background white black
+color listfocus white blue bold
+color article cyan black underline
+
+# Navigation
+bind-key j down               # Move down
+bind-key k up                 # Move up
+bind-key h quit               # Go back
+bind-key l open               # Open feed or article
+
+# Page scrolling
+bind-key Ctrl-d pagedown      # Half-page down
+bind-key Ctrl-u pageup        # Half-page up
+
+# Article view
+bind-key o open-in-browser    # Open article in browser
+bind-key v save               # Save article
+#bind-key d delete             # Mark article as read and delete
+bind-key u reload             # Reload the current feed
+
+# Marking articles
+#bind-key m toggle-read        # Mark/unmark an
