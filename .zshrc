@@ -12,7 +12,7 @@ export PATH=$PATH:~/platform-tools:~/python-env/bin
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export DOCKER_CONTENT_TRUST=1
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
-export LS_COLORS=$LS_COLORS:'di=30;41'
+export LS_COLORS="di=0;30;41"
 export DOCKER_CONTENT_TRUST=0
 export EDITOR=nvim
 export VISUAL=nvim
@@ -125,6 +125,7 @@ alias zap='zaproxy 1>/dev/null &'
 alias server='python3 -m http.server'
 
 alias sys='systemctl'
+alias nb='newsboat'
 alias want='web_search qwant'
 
 

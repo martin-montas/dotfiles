@@ -1,11 +1,8 @@
-
 browser "w3m"
 
 
-color info white red
-color background white black
-color listfocus white blue bold
-color article cyan black underline
+color info          black red
+color background    white black
 
 # Navigation
 bind-key j down               # Move down
