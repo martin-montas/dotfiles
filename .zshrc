@@ -9,6 +9,7 @@ export PATH=:/home/william//bin:/usr/sbin/:/home/william/bin:/usr/sbin/:/usr/loc
 export PATH=$PATH:~/go/bin
 export PATH=$PATH:~/platform-tools:~/python-env/bin
 
+export W3M_IMG_CMD="w3m-img"
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export DOCKER_CONTENT_TRUST=1
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
@@ -19,7 +20,7 @@ export VISUAL=nvim
 ZSH_THEME="robbyrussell"
 
 plugins=(
-    git zsh-autosuggestions zsh-syntax-highlighting
+    zsh-autosuggestions zsh-syntax-highlighting
     systemd
     git
     ansible
@@ -28,11 +29,11 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="false"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+ HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
