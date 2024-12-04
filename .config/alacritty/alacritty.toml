@@ -32,6 +32,7 @@ start = { foreground = "#181818", background = "#f4bf75" }
 end = { foreground = "#181818", background = "#ac4242" }
 
 [colors.primary]
+#background = '#050c19'
 background = '#0E1415'
 foreground = '#838996'
 
