@@ -1,4 +1,2 @@
-require("martin-montas.settings")
-require("martin-montas.keybinds")
-require("martin-montas.plugins")
-
+require("martin-montas.core")
+require("martin-montas.lazy")

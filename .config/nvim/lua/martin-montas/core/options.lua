@@ -1,7 +1,6 @@
 local g = vim.g
 local o = vim.o
 
-vim.api.nvim_command('let g:vim_be_good_delete_me_offset = 35')
 vim.api.nvim_command('set jumpoptions+=view')
 vim.api.nvim_command('set nowrap')
 vim.api.nvim_command('filetype plugin indent on')
@@ -14,6 +13,7 @@ o.background = 'dark'
 -- Decrease update time
 o.timeoutlen = 500
 o.updatetime = 200
+
 -- Number of screen lines to keep above and below the cursor
 o.scrolloff = 8
 
@@ -53,20 +53,16 @@ o.backup = false
 o.writebackup = false
 o.undofile = true
 o.swapfile = false
--- o.backupdir = '/tmp/'
--- o.directory = '/tmp/'
--- o.undodir = '/tmp/'
 
 -- Remember 50 items in commandline history
 o.history = 50
-vim.cmd.colorscheme('forest_stream')
 --vim.api.nvim_command('highlight Comment guibg=#333333 guifg=#b58900')
-vim.api.nvim_command('highlight Search guifg=black guibg=yellow')
-vim.api.nvim_command('highlight IncSearch guibg=#ffffff')
-vim.api.nvim_command('highlight cursorline guibg=#4B0E16')
-vim.api.nvim_command('highlight Function gui=None')
-vim.api.nvim_command('highlight LineNr guifg=#b0b0b0')
-vim.api.nvim_command('set nowrap')
+-- vim.api.nvim_command('highlight Search guifg=black guibg=yellow')
+-- vim.api.nvim_command('highlight IncSearch guibg=#ffffff')
+-- vim.api.nvim_command('highlight cursorline guibg=#4B0E16')
+-- vim.api.nvim_command('highlight Function gui=None')
+-- vim.api.nvim_command('highlight LineNr guifg=#b0b0b0')
+-- vim.api.nvim_command('set nowrap')
 g.netrw_banner = 0
 g.netrw_liststyle = 0
 g.netrw_browse_split = 0
