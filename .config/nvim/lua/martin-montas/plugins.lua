@@ -10,7 +10,6 @@ return require("packer").startup(function(use)
             ts_update()
         end,
     }
-
     use {
         "folke/trouble.nvim",
         config = function()
@@ -57,7 +56,7 @@ return require("packer").startup(function(use)
         }
     }
     use "lukas-reineke/indent-blankline.nvim"
-    --use 'Exafunction/codeium.vim'
+    use 'Exafunction/codeium.vim'
     -- Put this at the end after all plugins
     if packer_bootstrap then
         require('packer').sync()

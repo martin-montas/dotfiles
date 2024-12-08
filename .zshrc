@@ -7,7 +7,8 @@ export GOPATH=$HOME/go
 export PATH=/usr/sbin/:$PATH
 export PATH=:/home/william//bin:/usr/sbin/:/home/william/bin:/usr/sbin/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games/
 export PATH=$PATH:~/go/bin
-export PATH=$PATH:~/platform-tools:~/python-env/bin
+export PATH=$PATH:~/python-env/bin
+export PATH=$PATH:/opt/zeek/bin
 
 export W3M_IMG_CMD="w3m-img"
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
@@ -159,6 +160,4 @@ function f() {
     DIR=$(find . -type d | fzf)
     cd "$DIR" || return 1
 }
-
-
 fortune | cowsay 
