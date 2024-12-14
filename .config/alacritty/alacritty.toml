@@ -33,7 +33,7 @@ end = { foreground = "#181818", background = "#ac4242" }
 
 [colors.primary]
 #background = '#050c19'
-background = '#0E1415'
+background = '#010312'
 foreground = '#838996'
 
 [colors.cursor]

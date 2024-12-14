@@ -5,8 +5,9 @@ vim.api.nvim_command('set jumpoptions+=view')
 vim.api.nvim_command('set nowrap')
 vim.api.nvim_command('filetype plugin indent on')
 o.termguicolors = true
-o.background = 'dark'
+g.background = 'dark'
 --vim.api.nvim_command('set colorcolumn=85')
+vim.api.nvim_command('syntax on')
 -- Do not save when switching buffers
 -- o.hidden = true
 
@@ -36,10 +37,7 @@ o.tabstop = 4
 o.shiftwidth = 0
 o.softtabstop = -1 -- If negative, shiftwidth value is used
 o.list = true
-o.listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂'
--- o.listchars = 'eol:¬,space:·,lead: ,trail:·,nbsp:◇,tab:→-,extends:▸,precedes:◂,multispace:···⬝,leadmultispace:│   ,'
--- o.formatoptions = 'qrn1'
-
+o.listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂' -- o.listchars = 'eol:¬,space:·,lead: ,trail:·,nbsp:◇,tab:→-,extends:▸,precedes:◂,multispace:···⬝,leadmultispace:│   ,' o.formatoptions = 'qrn1'
 -- Makes neovim and host OS clipboard play nicely with each other
 o.clipboard = 'unnamedplus'
 
@@ -56,20 +54,11 @@ o.swapfile = false
 
 -- Remember 50 items in commandline history
 o.history = 50
-vim.cmd.colorscheme('habamax')
---vim.api.nvim_command('highlight Comment guibg=#333333 guifg=#b58900')
--- vim.api.nvim_command('highlight Search guifg=black guibg=yellow')
--- vim.api.nvim_command('highlight IncSearch guibg=#ffffff')
--- vim.api.nvim_command('highlight cursorline guibg=#4B0E16')
--- vim.api.nvim_command('highlight Function gui=None')
--- vim.api.nvim_command('highlight LineNr guifg=#b0b0b0')
--- vim.api.nvim_command('set nowrap')
 g.netrw_banner = 0
 g.netrw_liststyle = 0
 g.netrw_browse_split = 0
 g.netrw_altv = 1
 g.netrw_winsize = 12
-
 -- Better buffer splitting
 o.splitright = true
 o.splitbelow = true
@@ -77,9 +66,6 @@ g.do_filetype_lua = 1
 g.mapleader = ' '
 g.maplocalleader = ' '
 vim.g.codeium_enabled = true
-vim.api.nvim_command('highlight StatusLine guibg=#838996 guifg=#333333')
--- vim.api.nvim_command('highlight Normal guibg=#1C1A0D') 
-
 vim.api.nvim_create_autocmd('TextYankPost', {
     group = vim.api.nvim_create_augroup('highlight_yank', {}),
     desc = 'Highlight selection on yank',

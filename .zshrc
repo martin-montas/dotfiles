@@ -9,6 +9,7 @@ export PATH=:/home/william//bin:/usr/sbin/:/home/william/bin:/usr/sbin/:/usr/loc
 export PATH=$PATH:~/go/bin
 export PATH=$PATH:~/python-env/bin
 export PATH=$PATH:/opt/zeek/bin
+export PATH=$PATH:~/.cargo/bin/
 
 export W3M_IMG_CMD="w3m-img"
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
@@ -18,7 +19,7 @@ export LS_COLORS="di=0;30;41"
 export DOCKER_CONTENT_TRUST=0
 export EDITOR=nvim
 export VISUAL=nvim
-ZSH_THEME="robbyrussell"
+ZSH_THEME="gallois"
 
 plugins=(
     zsh-autosuggestions zsh-syntax-highlighting
@@ -151,8 +152,8 @@ alias metadisable="VBoxManage controlvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} s
 alias startserver="VBoxManage startvm {5954f299-79b9-4201-9ccc-5fdf69e09b3c} --type headless"
 alias disableserver="VBoxManage controlvm {5954f299-79b9-4201-9ccc-5fdf69e09b3c} savestate"
 
-alias vulnvmen="VBoxManage startvm {b9e46c1f-9d3c-41ba-9dc7-9a839fae827f} --type headless"
-alias vulnvmdis="VBoxManage controlvm {b9e46c1f-9d3c-41ba-9dc7-9a839fae827f} savestate" 
+alias vulnen="VBoxManage startvm {b9e46c1f-9d3c-41ba-9dc7-9a839fae827f} --type headless"
+alias vulndis="VBoxManage controlvm {b9e46c1f-9d3c-41ba-9dc7-9a839fae827f} savestate" 
 
 
 function f() {
