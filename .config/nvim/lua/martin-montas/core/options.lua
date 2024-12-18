@@ -4,12 +4,11 @@ local o = vim.o
 vim.api.nvim_command('set jumpoptions+=view')
 vim.api.nvim_command('set nowrap')
 vim.api.nvim_command('filetype plugin indent on')
-o.termguicolors = true
+o.termguicolors = false
 g.background = 'dark'
---vim.api.nvim_command('set colorcolumn=85')
+vim.api.nvim_command('colorscheme broduo')
 vim.api.nvim_command('syntax on')
 -- Do not save when switching buffers
--- o.hidden = true
 
 -- Decrease update time
 o.timeoutlen = 500
@@ -74,4 +73,19 @@ vim.api.nvim_create_autocmd('TextYankPost', {
         vim.highlight.on_yank { higroup = 'IncSearch', timeout = 150 }
     end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.cmd([[
+        highlight @markup.strong gui=bold guifg=#FF0000 cterm=bold ctermfg=Red
+    ]])
+ end
+})
+
+
+vim.api.nvim_set_hl(0, 'markdownH1', { fg = '#ff0000', bold = false })
+vim.api.nvim_set_hl(0, 'markdownH2', { fg = '#00ff00', bold = false })
+vim.api.nvim_set_hl(0, 'markdownH3', { fg = '#0000ff', bold = false })
+vim.api.nvim_set_hl(0, 'markdownH4', { fg = '#ff00ff', bold = false })
 

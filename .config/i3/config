@@ -123,6 +123,12 @@ bindsym $mod+Shift+o   exec --no-startup-id brightnessctl set +10% && notify-sen
 bindsym $mod+Shift+i   exec --no-startup-id brightnessctl set 10%- && notify-send --urgency=low -r 9999 "󰃠  Brightness: $((($(brightnessctl g)*100)/$(brightnessctl m)))%"
 
 
+
+# uses the mute and unmute on the computer
+bindsym $mod+Shift+m   exec  pactl set-source-mute 1 1
+bindsym $mod+Shift+u   exec  pactl set-source-mute 1 0
+
+
 # audio
 bindsym $mod+u exec alacritty -e 'alsamixer'
 # change container layout (stacked, tabbed, toggle split)
@@ -235,7 +241,7 @@ gaps inner 18px
 # finds out, if available)
 client.focused          #2e3436 #2e3436 #ffffff #2e3436   #2e3436
 
-exec_always --no-startup-id feh --bg-fill $HOME/personal/sky.jpg
+exec_always --no-startup-id feh --bg-fill Photos-Download-Black-Backgrounds.jpg
 
 # i3 lock for when closing the laptop
 exec_always --no-startup-id /$HOME/.config/i3/lock-every-30-mins.sh

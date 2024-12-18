@@ -10,12 +10,13 @@ export PATH=$PATH:~/go/bin
 export PATH=$PATH:~/python-env/bin
 export PATH=$PATH:/opt/zeek/bin
 export PATH=$PATH:~/.cargo/bin/
+export PYTHONPATH=PYTHONPATH:/home/william/python-env/lib/python3.11/site-packages
 
 export W3M_IMG_CMD="w3m-img"
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export DOCKER_CONTENT_TRUST=1
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
-export LS_COLORS="di=0;30;41"
+export LS_COLORS="di=0;41;33"
 export DOCKER_CONTENT_TRUST=0
 export EDITOR=nvim
 export VISUAL=nvim
@@ -155,10 +156,10 @@ alias disableserver="VBoxManage controlvm {5954f299-79b9-4201-9ccc-5fdf69e09b3c}
 alias vulnen="VBoxManage startvm {b9e46c1f-9d3c-41ba-9dc7-9a839fae827f} --type headless"
 alias vulndis="VBoxManage controlvm {b9e46c1f-9d3c-41ba-9dc7-9a839fae827f} savestate" 
 
-
 function f() {
     local DIR
     DIR=$(find . -type d | fzf)
     cd "$DIR" || return 1
 }
 fortune | cowsay 
+

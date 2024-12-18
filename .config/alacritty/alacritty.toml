@@ -19,54 +19,39 @@ history = 10000
 multiplier = 3
 
 [font]
-normal = { family = "Hack", style = "Bold" }
+normal = { family = "HackNerdFontMono", style = "Bold" }
 size = 7.5
 builtin_box_drawing = false 
 
-[colors.search]
-matches = { foreground = "#181818", background = "#ac4242" }
-focused_match = { foreground = "#181818", background = "#f4bf75" }
+# Windows 95 Color Scheme
+# To have the authentic experience in Chicago95 GTK Theme.
 
-[colors.hints]
-start = { foreground = "#181818", background = "#f4bf75" }
-end = { foreground = "#181818", background = "#ac4242" }
-
+# Default colors
 [colors.primary]
-#background = '#050c19'
-background = '#010312'
-foreground = '#838996'
+background = '#000000'
+foreground = '#A85400'
 
-[colors.cursor]
-text = '#0E1415'
-cursor = '#CECECE'
-
+# Normal colors
 [colors.normal]
-black = '#0E1415'
-red = '#e25d56'
-green = '#73ca50'
-yellow = '#e9bf57'
-blue = '#4a88e4'
-magenta = '#915caf'
-cyan = '#23acdd'
-white = '#f0f0f0'
+black   = '#000000'
+red     = '#A80000'
+green   = '#00A800'
+yellow  = '#A85400'
+blue    = '#0000A8'
+magenta = '#A800A8'
+cyan    = '#00A8A8'
+white   = '#A8A8A8'
 
+# Bright colors
 [colors.bright]
-black = '#777777'
-red = '#f36868'
-green = '#88db3f'
-yellow = '#f0bf7a'
-blue = '#6f8fdb'
-magenta = '#e987e9'
-cyan = '#4ac9e2'
-white = '#FFFFFF'
-
-[[colors.indexed_colors]]
-index = 16
-color = '#d18616'
-
-[[colors.indexed_colors]]
-index = 17
-color = '#ffa198'
+black   = '#545454'
+red     = '#FC5454'
+green   = '#54FC54'
+yellow  = '#FCFC54'
+blue    = '#5454FC'
+magenta = '#FC54FC'
+cyan    = '#54FCFC'
+white   = '#FFFFFF'
 
 [bell]
 animation = "Linear"

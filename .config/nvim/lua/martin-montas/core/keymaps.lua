@@ -45,6 +45,7 @@ vim.keymap.set('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { 
 vim.keymap.set('i', '<C-l>', function() return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
 vim.keymap.set('i', '<C-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
 vim.keymap.set('i', '<C-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
+vim.keymap.set('n', '<C-g>', ':RenderMardown toggle<CR>' )
 
 vim.keymap.set('c', '<C-l>', "<C-Right>")
 vim.keymap.set('c', '<C-h>', "<C-Left>")
