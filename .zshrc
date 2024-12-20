@@ -153,8 +153,16 @@ alias metadisable="VBoxManage controlvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} s
 alias startserver="VBoxManage startvm {5954f299-79b9-4201-9ccc-5fdf69e09b3c} --type headless"
 alias disableserver="VBoxManage controlvm {5954f299-79b9-4201-9ccc-5fdf69e09b3c} savestate"
 
+
+alias winservstart="VBoxManage controlvm {4b2c50ce-11fa-4cac-a7be-808177c64195} --type headless"
+alias winservend"VBoxManage controlvm {4b2c50ce-11fa-4cac-a7be-808177c64195} savestate" 
+
+
 alias vulnen="VBoxManage startvm {b9e46c1f-9d3c-41ba-9dc7-9a839fae827f} --type headless"
 alias vulndis="VBoxManage controlvm {b9e46c1f-9d3c-41ba-9dc7-9a839fae827f} savestate" 
+
+
+
 
 function f() {
     local DIR
