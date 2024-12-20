@@ -9,7 +9,6 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
 set $first_mon DP-2-3
 set $second_mon DP-2-3
 
@@ -36,6 +35,7 @@ set $magenta    #B48EAD
 set $nice_blue  #387CA5
 
 
+set $mod Mod1
 
 
 
