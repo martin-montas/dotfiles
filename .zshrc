@@ -129,6 +129,7 @@ alias zap='zaproxy 1>/dev/null &'
 alias server='python3 -m http.server'
 
 alias sys='systemctl'
+alias cd='z'
 alias nb='newsboat'
 alias want='web_search qwant'
 
@@ -162,12 +163,5 @@ alias vulnen="VBoxManage startvm {b9e46c1f-9d3c-41ba-9dc7-9a839fae827f} --type h
 alias vulndis="VBoxManage controlvm {b9e46c1f-9d3c-41ba-9dc7-9a839fae827f} savestate" 
 
 
-
-
-function f() {
-    local DIR
-    DIR=$(find . -type d | fzf)
-    cd "$DIR" || return 1
-}
+eval "$(zoxide init zsh)"
 fortune | cowsay 
-
