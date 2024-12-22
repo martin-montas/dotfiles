@@ -25,9 +25,7 @@ ZSH_THEME="gallois"
 plugins=(
     zsh-autosuggestions zsh-syntax-highlighting
     systemd
-    git
-    ansible
-    web-search
+    zoxide
 
 )
 source $ZSH/oh-my-zsh.sh
@@ -123,15 +121,11 @@ alias la='ls --color=auto -la'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
 alias tm='tmux'
 alias ms='msfconsole'
-alias ansibleenv='source $HOME/python-env/bin/activate'
+alias py-env-a='source $HOME/python-env/bin/activate'
 alias t='tgpt'
-alias zap='zaproxy 1>/dev/null &'
 alias server='python3 -m http.server'
 
-alias sys='systemctl'
-alias cd='z'
 alias nb='newsboat'
-alias want='web_search qwant'
 
 
 # Custom widget to paste from clipboard
@@ -154,14 +148,18 @@ alias metadisable="VBoxManage controlvm {57c27a92-8454-437b-ab2e-4dea46bc5ffb} s
 alias startserver="VBoxManage startvm {5954f299-79b9-4201-9ccc-5fdf69e09b3c} --type headless"
 alias disableserver="VBoxManage controlvm {5954f299-79b9-4201-9ccc-5fdf69e09b3c} savestate"
 
-
-alias winservstart="VBoxManage controlvm {4b2c50ce-11fa-4cac-a7be-808177c64195} --type headless"
-alias winservend"VBoxManage controlvm {4b2c50ce-11fa-4cac-a7be-808177c64195} savestate" 
-
+alias windowse="VBoxManage startvm {babb4e33-b6cc-4138-974c-59b4e245710d} --type headless"
+alias windowsd="VBoxManage controlvm {babb4e33-b6cc-4138-974c-59b4e245710d} savestate"
 
 alias vulnen="VBoxManage startvm {b9e46c1f-9d3c-41ba-9dc7-9a839fae827f} --type headless"
-alias vulndis="VBoxManage controlvm {b9e46c1f-9d3c-41ba-9dc7-9a839fae827f} savestate" 
+alias vulndis="VBoxManage controlvm {b9e46c1f-9d3c-41ba-9dc7-9a839fae827f} savestate"
 
+function f() {
+    local DIR
+    DIR=$(find . -type d | fzf)
+    cd "$DIR" || return 1
+}
 
 eval "$(zoxide init zsh)"
 fortune | cowsay 
+

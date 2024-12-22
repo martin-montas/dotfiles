@@ -8,7 +8,7 @@ o.termguicolors = false
 g.background = 'dark'
 vim.api.nvim_command('colorscheme broduo')
 vim.api.nvim_command('syntax on')
--- Do not save when switching buffers
+-- vim.api.nvim_command('highlight CursorLine ctermbg=')
 
 -- Decrease update time
 o.timeoutlen = 500
@@ -36,8 +36,7 @@ o.tabstop = 4
 o.shiftwidth = 0
 o.softtabstop = -1 -- If negative, shiftwidth value is used
 o.list = true
-o.listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂' -- o.listchars = 'eol:¬,space:·,lead: ,trail:·,nbsp:◇,tab:→-,extends:▸,precedes:◂,multispace:···⬝,leadmultispace:│   ,' o.formatoptions = 'qrn1'
--- Makes neovim and host OS clipboard play nicely with each other
+o.listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂' 
 o.clipboard = 'unnamedplus'
 
 -- Case insensitive searching UNLESS /C or capital in search
@@ -51,14 +50,12 @@ o.writebackup = false
 o.undofile = true
 o.swapfile = false
 
--- Remember 50 items in commandline history
 o.history = 50
 g.netrw_banner = 0
 g.netrw_liststyle = 0
 g.netrw_browse_split = 0
 g.netrw_altv = 1
 g.netrw_winsize = 12
--- Better buffer splitting
 o.splitright = true
 o.splitbelow = true
 g.do_filetype_lua = 1
