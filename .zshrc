@@ -162,4 +162,3 @@ function f() {
 
 eval "$(zoxide init zsh)"
 fortune | cowsay 
-
