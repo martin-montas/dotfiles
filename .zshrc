@@ -10,6 +10,7 @@ export PATH=$PATH:~/go/bin
 export PATH=$PATH:~/python-env/bin
 export PATH=$PATH:/opt/zeek/bin
 export PATH=$PATH:~/.cargo/bin/
+export PATH=$PATH:$HOME/.local/bin
 export PYTHONPATH=PYTHONPATH:/home/william/python-env/lib/python3.11/site-packages
 
 export W3M_IMG_CMD="w3m-img"
@@ -162,3 +163,4 @@ function f() {
 
 eval "$(zoxide init zsh)"
 fortune | cowsay 
+
