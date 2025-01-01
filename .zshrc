@@ -18,6 +18,8 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export DOCKER_CONTENT_TRUST=1
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export LS_COLORS="di=0;41;33"
+export LS_COLORS="di=0;14;33:ln=1;36:so=1;32:pi=1;33:ex=1;31"
+export LS_COLORS="fi=33;5;251"  # Light gray color for normal files
 export DOCKER_CONTENT_TRUST=0
 export EDITOR=nvim
 export VISUAL=nvim
@@ -25,8 +27,7 @@ ZSH_THEME="gallois"
 
 plugins=(
     zsh-autosuggestions zsh-syntax-highlighting
-    systemd
-    zoxide
+    systemd zoxide
 
 )
 source $ZSH/oh-my-zsh.sh
