@@ -18,8 +18,6 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export DOCKER_CONTENT_TRUST=1
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export LS_COLORS="di=0;41;33"
-export LS_COLORS="di=0;14;33:ln=1;36:so=1;32:pi=1;33:ex=1;31"
-export LS_COLORS="fi=33;5;251"  # Light gray color for normal files
 export DOCKER_CONTENT_TRUST=0
 export EDITOR=nvim
 export VISUAL=nvim
@@ -116,18 +114,33 @@ bindkey -v
 alias vim='nvim'
 alias vi='nvim'
 alias v='nvim'
-alias ls='ls --color=auto' 
+alias ls='ls --color=auto'
 alias l='ls --color=auto -la'
 alias ll='ls --color=auto -l'
 alias la='ls --color=auto -la'
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias nb='newsboat'
 alias tm='tmux'
 alias ms='msfconsole'
 alias py-env-a='source $HOME/python-env/bin/activate'
 alias t='tgpt'
 alias server='python3 -m http.server'
 
-alias nb='newsboat'
+
+alias ..2='cd ../..'
+alias ..3='cd ../../..'
+alias ..4='cd ../../../..'
+alias ..5='cd ../../../../..'
+
+alias update='sudo apt update && sudo apt upgrade -y'
+alias install='sudo apt install'
+
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gl='git log'
+alias gpull='git pull'
 
 
 # Custom widget to paste from clipboard
@@ -165,3 +178,5 @@ function f() {
 eval "$(zoxide init zsh)"
 fortune | cowsay 
 
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
