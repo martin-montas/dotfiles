@@ -19,9 +19,10 @@ history = 10000
 multiplier = 3
 
 [font]
-normal = { family = "HackNerdFontMono", style = "Bold" }
-size = 7.5
-builtin_box_drawing = false 
+
+# /usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf: Noto Sans Mono:style=Regular
+# /usr/share/fonts/truetype/noto/NotoSansMono-Bold.ttf: Noto Sans Mono:style=Bold /usr/share/fonts/truetype/noto/NotoMono-Regular.ttf: Noto Mono:style=Regular
+normal = { family = "NotoSansMono", style = "Regular" }
 
 # Windows 95 Color Scheme
 # To have the authentic experience in Chicago95 GTK Theme.

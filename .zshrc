@@ -140,7 +140,6 @@ alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
 alias gl='git log'
-alias gpull='git pull'
 
 
 # Custom widget to paste from clipboard
