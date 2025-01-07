@@ -20,9 +20,8 @@ multiplier = 3
 
 [font]
 
-# /usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf: Noto Sans Mono:style=Regular
-# /usr/share/fonts/truetype/noto/NotoSansMono-Bold.ttf: Noto Sans Mono:style=Bold /usr/share/fonts/truetype/noto/NotoMono-Regular.ttf: Noto Mono:style=Regular
-normal = { family = "NotoSansMono", style = "Regular" }
+# /home/william/.fonts/HackNerdFont-Regular.ttf: Hack Nerd Font:style=Regular
+normal = { family ="Hack Nerd Font", style = "Regular" }
 
 # Windows 95 Color Scheme
 # To have the authentic experience in Chicago95 GTK Theme.
