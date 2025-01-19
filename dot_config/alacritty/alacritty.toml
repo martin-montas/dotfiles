@@ -1,0 +1,80 @@
+general.live_config_reload = true
+
+
+[terminal]
+
+shell = "tmux"
+
+[window]
+startup_mode = "Windowed"
+title = "Alacritty"
+dynamic_title = true 
+decorations_theme_variant = "None"
+decorations = "Full"
+opacity = 0.9
+blur = false 
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[font]
+# /home/william/.fonts/HackNerdFont-Regular.ttf: Hack Nerd Font:style=Regular
+normal = { family ="HackNerdFontMono", style = "Bold" }
+size  = 14.0
+
+# github Alacritty Colors
+
+# Default colors
+[colors.primary]
+background = '#000000'
+foreground = '#838996'
+
+# Normal colors
+[colors.normal]
+black   = '#484f58'
+red     = '#ff7b72'
+green   = '#3fb950'
+yellow  = '#d29922'
+blue    = '#58a6ff'
+magenta = '#bc8cff'
+cyan    = '#39c5cf'
+white   = '#b1bac4'
+
+# Bright colors
+[colors.bright]
+black   = '#6e7681'
+red     = '#ffa198'
+green   = '#56d364'
+yellow  = '#e3b341'
+blue    = '#79c0ff'
+magenta = '#d2a8ff'
+cyan    = '#56d4dd'
+white   = '#f0f6fc'
+
+[[colors.indexed_colors]]
+index = 16
+color = '#d18616'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#ffa198'
+
+
+[bell]
+animation = "Linear"
+duration = 0
+#color = "#ffffff"
+#command = "None"
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+unfocused_hollow = true
+thickness = 0.15
+
+[mouse]
+hide_when_typing = true
