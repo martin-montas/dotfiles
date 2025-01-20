@@ -64,8 +64,12 @@ bindsym $mod+b exec firefox
 # kill focused window
 bindsym $mod+q kill
 
-# volume control
-bindsym $mod+u exec pavucontrol
+
+
+bindsym $mod+p exec pamixer --increase 5
+bindsym $mod+o exec pamixer --decrease 5
+bindsym $mod+n exec pamixer --toggle-mute
+
 
 # start dmenu (a program launcher
 bindsym $mod+d exec rofi -show drun
