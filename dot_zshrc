@@ -21,7 +21,7 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export DOCKER_CONTENT_TRUST=0
 export EDITOR=nvim
 export VISUAL=nvim
-ZSH_THEME="gallois"
+ZSH_THEME="tonotdo"
 
 plugins=(
     zsh-autosuggestions
@@ -126,6 +126,7 @@ alias py-env-a='source $HOME/python-env/bin/activate'
 alias t='tgpt'
 alias server='python3 -m http.server'
 alias chez='chezmoi'
+alias tf='terraform'
 
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
@@ -145,12 +146,6 @@ alias gl='git log'
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 
-# Bind Ctrl+f to the fzf_command function
-bindkey '^f' fzf_command
-export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
-export FZF_DEFAULT_OPTS="--no-preview --height 100% --border --reverse"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 
 # Custom widget to paste from clipboard
 function zle-paste-clipboard() {
@@ -164,14 +159,6 @@ bindkey -M vicmd 'p' zle-paste-clipboard
 alias metaen='vmrun -T ws start "$HOME/Metasploitable2-Linux/Metasploitable.vmx" nogui'
 alias metasus='vmrun -T ws suspend "$HOME/Metasploitable2-Linux/Metasploitable.vmx"'
 
-# Unbind Ctrl+f (forward search)
-bindkey -r '^f'
-
-# Define the fzf_function
-fzf_function() {
-    fd --hidden --strip-cwd-prefix --exclude .git | fzf --no-preview --height 100% --border --reverse
-}
-
-# Bind Ctrl+f to run the fzf_function
-zle -N fzf_function
-bindkey '^f' fzf_function
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_DEFAULT_OPTS="--no-preview --height 100% --border --reverse"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
