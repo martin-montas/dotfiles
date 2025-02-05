@@ -9,7 +9,6 @@ g.background = 'dark'
 vim.api.nvim_command('syntax on')
 vim.api.nvim_command('highlight CursorLine guibg=#990000')
 vim.api.nvim_command('highlight  StatusLine guibg=#838996 guifg=#111111')
-vim.api.nvim_command('highlight  Normal guibg=#030109')
 
 -- Decrease update time
 o.timeoutlen = 500
@@ -82,9 +81,5 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 
-vim.api.nvim_set_hl(0, 'markdownH1', { fg = '#ff0000', bold = false })
-vim.api.nvim_set_hl(0, 'markdownH2', { fg = '#00ff00', bold = false })
-vim.api.nvim_set_hl(0, 'markdownH3', { fg = '#0000ff', bold = false })
-vim.api.nvim_set_hl(0, 'markdownH4', { fg = '#ff00ff', bold = false })
 
 vim.opt.hlsearch = true

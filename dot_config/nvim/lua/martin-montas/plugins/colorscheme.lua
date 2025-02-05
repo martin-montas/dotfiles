@@ -1,7 +1,7 @@
 return {
-    	'rockerBOO/boo-colorscheme-nvim',
+    	'folke/tokyonight.nvim',
 	config = function() 
-		vim.api.nvim_command('colorscheme forest_stream')
-        vim.api.nvim_command('highlight  StatusLine guibg=#838996 guifg=#111111')
+        vim.api.nvim_command('colorscheme tokyonight-night')
+        --vim.api.nvim_command('highlight  Normal guibg=None')
 	end
 }
