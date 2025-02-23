@@ -53,7 +53,7 @@ alias py-env-a='source $HOME/python-env/bin/activate'
 alias t='tgpt'
 alias server='python3 -m http.server'
 alias cz='chezmoi'
-alias tf='terraform'
+alias form='terraform'
 
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
