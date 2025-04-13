@@ -4,13 +4,14 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 export GOPATH=$HOME/go
-export PATH=/usr/sbin/:$PATH
 export PATH=:/home/william//bin:/usr/sbin/:/home/william/bin:/usr/sbin/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games/
 export PATH=$PATH:~/go/bin
 export PATH=$PATH:~/python-env/bin
 export PATH=$PATH:/opt/zeek/bin
 export PATH=$PATH:~/.cargo/bin/
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/home/william/main-env/bin/
 export PYTHONPATH=PYTHONPATH:/home/william/python-env/lib/python3.11/site-packages
 
 export W3M_IMG_CMD="w3m-img"
@@ -20,13 +21,14 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export DOCKER_CONTENT_TRUST=0
 export EDITOR=nvim
 export VISUAL=nvim
-ZSH_THEME="tonotdo"
+#ZSH_THEME="tonotdo"
+ZSH_THEME="alanpeabody"
 
 plugins=(
     zsh-autosuggestions
     systemd zoxide
-
 )
+
 source $ZSH/oh-my-zsh.sh
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="false"
@@ -35,10 +37,8 @@ CASE_SENSITIVE="false"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
  HYPHEN_INSENSITIVE="true"
 
-
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
-
 
 # Enable vi mode
 bindkey -v
@@ -54,14 +54,10 @@ alias t='tgpt'
 alias server='python3 -m http.server'
 alias cz='chezmoi'
 alias form='terraform'
+alias l='ls -la --color=auto' 
 
-alias ..2='cd ../..'
-alias ..3='cd ../../..'
-alias ..4='cd ../../../..'
-alias ..5='cd ../../../../..'
-
-alias update='sudo apt update && sudo apt upgrade -y'
-alias install='sudo apt install'
+alias ls='exa --icons' 
+alias l='exa -la --icons' 
 
 alias gs='git status'
 alias ga='git add'
@@ -69,24 +65,15 @@ alias gc='git commit'
 alias gp='git push'
 alias gl='git log'
 
-alias ls='eza --color=always --group-directories-first --icons'
-alias ll='eza -la --icons --octal-permissions --group-directories-first --icons'
-alias l='eza --long --all --group --group-directories-first --icons'
-alias llm='eza -lbGd --header --git --sort=modified --color=always --group-directories-first --icons' 
-alias la='eza --long --all --group --group-directories-first --icons'
-alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale --color=always --group-directories-first --icons'
-
-alias lS='eza -1 --color=always --group-directories-first --icons'
-alias lt='eza --tree --level=2 --color=always --group-directories-first --icons'
-alias l.="eza -a | grep -E '^\.'"
-
-# Custom widget to paste from clipboard
+# Custom widget to paste from system clipboard
 function zle-paste-clipboard() {
-    LBUFFER+=$(wl-paste)
+  LBUFFER+=$(xclip -selection clipboard -o)
 }
 
-# Bind the custom widget to the 'p' key in vi command mode
+# Register the widget
 zle -N zle-paste-clipboard
+
+# Bind 'p' in vi command mode to the widget
 bindkey -M vicmd 'p' zle-paste-clipboard
 
 alias metaen='vmrun -T ws start "$HOME/Metasploitable2-Linux/Metasploitable.vmx" nogui'
