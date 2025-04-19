@@ -1,14 +1,15 @@
 local  g = vim.g
-local o = vim.o
+local  o = vim.o
 
 vim.api.nvim_command('set jumpoptions+=view')
 vim.api.nvim_command('set nowrap')
 vim.api.nvim_command('filetype plugin indent on')
+vim.api.nvim_command('hi Normal guibg=None')
 o.termguicolors = true
 g.background = 'dark'
 vim.api.nvim_command('syntax on')
-vim.api.nvim_command('highlight CursorLine guibg=#990000')
-vim.api.nvim_command('highlight  StatusLine guibg=#838996 guifg=#111111')
+-- vim.api.nvim_command('hi StatusLine guibg=#c0c0c0 guifg=#131313')
+--vim.api.nvim_command('hi Normal guibg=#08080b')
 
 -- Decrease update time
 o.timeoutlen = 500
