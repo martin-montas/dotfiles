@@ -11,7 +11,7 @@ export PATH=$PATH:/opt/zeek/bin
 export PATH=$PATH:~/.cargo/bin/
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:/usr/local/bin
-# export PATH=$PATH:/home/william/main-env/bin/
+export PATH=$PATH:/home/william/main-env/bin/
 export PYTHONPATH=PYTHONPATH:/home/william/python-env/lib/python3.11/site-packages
 
 export W3M_IMG_CMD="w3m-img"
@@ -22,7 +22,8 @@ export DOCKER_CONTENT_TRUST=0
 export EDITOR=nvim
 export VISUAL=nvim
 #ZSH_THEME="tonotdo"
-ZSH_THEME="alanpeabody"
+#ZSH_THEME="alanpeabody"
+ZSH_THEME="afowler"
 
 plugins=(
     zsh-autosuggestions
@@ -67,7 +68,7 @@ alias gl='git log'
 
 # Custom widget to paste from system clipboard
 function zle-paste-clipboard() {
-  LBUFFER+=$(xclip -selection clipboard -o)
+  LBUFFER+=$(wl-paste)
 }
 
 # Register the widget
