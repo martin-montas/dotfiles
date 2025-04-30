@@ -1,4 +1,1 @@
-return {
-    "nvim-lua/plenary.nvim",
-}
-
+require("plugins.colorscheme").setup()

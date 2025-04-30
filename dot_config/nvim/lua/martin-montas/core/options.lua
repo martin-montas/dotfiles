@@ -4,13 +4,9 @@ local  o = vim.o
 vim.api.nvim_command('set jumpoptions+=view')
 vim.api.nvim_command('set nowrap')
 vim.api.nvim_command('filetype plugin indent on')
--- vim.api.nvim_command('hi Normal guibg=None')
 o.termguicolors = true
 g.background = 'dark'
 vim.api.nvim_command('syntax on')
-vim.api.nvim_command('hi Normal guibg=#080808')
-
-vim.api.nvim_command('colorscheme forest_stream')
 -- Decrease update time
 o.timeoutlen = 500
 o.updatetime = 200
@@ -73,14 +69,17 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "markdown",
-  callback = function()
-    vim.cmd([[
+    pattern = "markdown",
+    callback = function()
+        vim.cmd([[
         highlight @markup.strong gui=bold guifg=#FF0000 cterm=bold ctermfg=Red
-    ]])
- end
+        ]])
+    end
 })
 
 vim.opt.hlsearch = true
-vim.api.nvim_command('hi StatusLine guibg=#808080 guifg=#131313')
-vim.api.nvim_command('hi cursorLine guibg=#4B1E22')
+-- vim.api.nvim_command('hi cursorLine guibg=#4B1E22')
+vim.api.nvim_command('colorscheme solarized-osaka')
+vim.api.nvim_command('hi Normal guibg=#000f14')
+-- vim.api.nvim_command('hi StatusLine guibg=#808080 guifg=#131313')
+
