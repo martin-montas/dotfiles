@@ -23,7 +23,7 @@ export EDITOR=nvim
 export VISUAL=nvim
 #ZSH_THEME="tonotdo"
 #ZSH_THEME="alanpeabody"
-ZSH_THEME="afowler"
+ZSH_THEME="tonotdo"
 
 plugins=(
     zsh-autosuggestions

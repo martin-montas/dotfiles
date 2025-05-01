@@ -79,7 +79,5 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.opt.hlsearch = true
 -- vim.api.nvim_command('hi cursorLine guibg=#4B1E22')
-vim.api.nvim_command('colorscheme solarized-osaka')
-vim.api.nvim_command('hi Normal guibg=#000f14')
--- vim.api.nvim_command('hi StatusLine guibg=#808080 guifg=#131313')
-
+-- vim.api.nvim_command('hi Normal guibg=#0f161d')
+vim.api.nvim_command('hi StatusLine guibg=#808080 guifg=#131313')
