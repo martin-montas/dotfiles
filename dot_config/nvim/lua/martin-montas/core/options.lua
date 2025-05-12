@@ -32,7 +32,7 @@ o.tabstop = 4
 
 o.shiftwidth = 0
 o.softtabstop = -1 -- If negative, shiftwidth value is used
-o.list = true
+o.list = false
 o.listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂' 
 o.clipboard = 'unnamedplus'
 
@@ -60,24 +60,29 @@ g.mapleader = ' '
 g.maplocalleader = ' '
 vim.g.codeium_enabled = true
 vim.api.nvim_create_autocmd('TextYankPost', {
-    group = vim.api.nvim_create_augroup('highlight_yank', {}),
-    desc = 'Highlight selection on yank',
-    pattern = '*',
-    callback = function()
-        vim.highlight.on_yank { higroup = 'IncSearch', timeout = 150 }
-    end,
+   group = vim.api.nvim_create_augroup('highlight_yank', {}),
+   desc = 'Highlight selection on yank',
+   pattern = '*',
+   callback = function()
+      vim.highlight.on_yank { higroup = 'IncSearch', timeout = 150 }
+   end,
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "markdown",
-    callback = function()
-        vim.cmd([[
+   pattern = "markdown",
+   callback = function()
+      vim.cmd([[
         highlight @markup.strong gui=bold guifg=#FF0000 cterm=bold ctermfg=Red
         ]])
-    end
+   end
 })
 
 vim.opt.hlsearch = true
 -- vim.api.nvim_command('hi cursorLine guibg=#4B1E22')
 -- vim.api.nvim_command('hi Normal guibg=#0f161d')
-vim.api.nvim_command('hi StatusLine guibg=#808080 guifg=#131313')
+-- vim.api.nvim_command('hi StatusLine guibg=#101010 guifg=#131313')
+--
+--
+vim.opt.tabstop = 3       -- Number of spaces that a <Tab> in the file counts for
+vim.opt.shiftwidth = 3    -- Number of spaces to use for each step of (auto)indent
+vim.opt.expandtab = true  -- Use spaces instead of tabs
