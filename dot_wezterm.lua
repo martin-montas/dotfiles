@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 config.color_scheme = 'Tokyo Night (Gogh)'
-config.font_size = 16.5
+config.font_size = 18.5
 font = wezterm.font('Hack Nerd Font Mono')
 
 -- config.window_background_gradient = 1.0
@@ -24,7 +24,7 @@ config.window_padding = {
 }
 
 -- Transparent background
---config.window_background_opacity = 0.92
+config.window_background_opacity = 0.92
 config.use_fancy_tab_bar = true
 config.term  = 'xterm-256color'
 
