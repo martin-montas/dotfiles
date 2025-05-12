@@ -1,6 +1,6 @@
 return {
-    'rockerBOO/boo-colorscheme-nvim',
+    'folke/tokyonight.nvim',
     config = function()
-        vim.cmd('colorscheme habamax')
+        vim.cmd('colorscheme tokyonight-night')
     end
 }
