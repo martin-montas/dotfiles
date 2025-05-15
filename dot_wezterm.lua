@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 config.color_scheme = 'Tokyo Night (Gogh)'
-config.font_size = 18.5
+config.font_size = 17.5
 font = wezterm.font('Hack Nerd Font Mono')
 
 -- config.window_background_gradient = 1.0
@@ -29,9 +29,7 @@ config.use_fancy_tab_bar = true
 config.term  = 'xterm-256color'
 
 config.default_prog = {
-'/usr/sbin/zsh',
-'-c',
-'tmux new -s zensh'
+   'tmux'
 }
 config.enable_tab_bar = false
 
