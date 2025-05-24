@@ -41,6 +41,7 @@ o.ignorecase = true
 o.smartcase = true
 g.colorcolumn = true
 
+vim.o.colorcolumn = "80"
 -- Undo and backup options
 o.backup = false
 o.writebackup = false
@@ -86,3 +87,17 @@ vim.opt.hlsearch = true
 vim.opt.tabstop = 3       -- Number of spaces that a <Tab> in the file counts for
 vim.opt.shiftwidth = 3    -- Number of spaces to use for each step of (auto)indent
 vim.opt.expandtab = true  -- Use spaces instead of tabs
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    local api = require("nvim-tree.api")
+    local args = vim.fn.argv()
+    if #args == 0 then
+      api.tree.open()
+    end
+  end,
+})
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+

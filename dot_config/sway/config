@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $first_mon eDP-1
-set $second_mon DP-5
+set $second_mon DP-5 
 
 # Nordic colors.
 set $black      #191D24
@@ -42,7 +42,7 @@ set $mod Mod1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+font pango:Hack Nerd Font Mono 8
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -56,9 +56,10 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec /usr/sbin/ghostty
+bindsym $mod+e exec /usr/sbin/emacs
 
 # start the browser
-bindsym $mod+b exec librewolf 
+bindsym $mod+b exec firefox 
 
 # kill focused window
 bindsym $mod+q kill
@@ -126,7 +127,7 @@ bindsym $mod+Shift+u   exec  pactl set-source-mute 1 0
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -209,7 +210,6 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-exec_always swww-daemon
 
 
 bindsym $mod+r mode "resize"
@@ -246,7 +246,7 @@ exec_always {
 exec_always  swww img /home/william/personal/tokyo.jpg --transition-type fade --transition-duration 2
 
 blur enable
-blur_radius 5
+blur_radius 6
 blur_passes 2
 blur_brightness 1.0
 blur_contrast 1.0

@@ -19,7 +19,9 @@ export PATH=$PATH:~/.cargo/bin/
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/home/william/main-env/bin/
+export PATH=$PATH:$HOME/.emacs.d/bin
 export PYTHONPATH=PYTHONPATH:/home/william/python-env/lib/python3.11/site-packages
+export LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
 
 export W3M_IMG_CMD="w3m-img"
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
@@ -62,6 +64,7 @@ alias t='tgpt'
 alias server='python3 -m http.server'
 alias cz='chezmoi'
 alias form='terraform'
+alias em='emacs -nw'
 # alias l='ls -la --color=auto' 
 # 
 alias ls='exa --icons' 
@@ -84,8 +87,8 @@ zle -N zle-paste-clipboard
 # Bind 'p' in vi command mode to the widget
 bindkey -M vicmd 'p' zle-paste-clipboard
 
-alias metaen='vmrun -T ws start "$HOME/Metasploitable2-Linux/Metasploitable.vmx" nogui'
-alias metasus='vmrun -T ws suspend "$HOME/Metasploitable2-Linux/Metasploitable.vmx"'
+alias metaen='vmrun -T ws start "/home/william/vmware/Metasploitable2-Linux/Metasploitable.vmx" nogui'
+alias metasus='vmrun -T ws suspend "/home/william/vmware/Metasploitable2-Linux/Metasploitable.vmx"'
 
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 

@@ -1,9 +1,8 @@
 return {
-  "folke/tokyonight.nvim",
-  --name = "monet",
-
-    config = function()
-        vim.cmd('colorscheme tokyonight-night')
-        --vim.cmd('hi Normal guibg=None')
-    end
+  "catppuccin/nvim",
+  name = "catppuccin",
+  priority = 1000,
+  config = function()
+    vim.cmd.colorscheme "catppuccin-mocha"
+  end,
 }
