@@ -56,7 +56,6 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec /usr/sbin/ghostty
-bindsym $mod+e exec /usr/sbin/emacs
 
 # start the browser
 bindsym $mod+b exec firefox 
@@ -72,7 +71,7 @@ bindsym $mod+n exec pamixer --toggle-mute
 # start dmenu (a program launcher
 bindsym $mod+d exec rofi -show drun
 
-
+default_border none
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -111,17 +110,14 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+m fullscreen toggle
 
-
+client.focused  #61afef #1a1a1a #c678dd #61afef #61afef
 # Backlight control
 bindsym $mod+Shift+o   exec --no-startup-id brightnessctl set +10% && notify-send --urgency=low -r 9999 "󰃠  Brightness: $((($(brightnessctl g)*100)/$(brightnessctl m)))%"
 bindsym $mod+Shift+i   exec --no-startup-id brightnessctl set 10%- && notify-send --urgency=low -r 9999 "󰃠  Brightness: $((($(brightnessctl g)*100)/$(brightnessctl m)))%"
 
-
-
 # uses the mute and unmute on the computer
 bindsym $mod+Shift+m   exec  pactl set-source-mute 1 1
 bindsym $mod+Shift+u   exec  pactl set-source-mute 1 0
-
 
 # audio
 # change container layout (stacked, tabbed, toggle split)
@@ -143,16 +139,16 @@ bindsym $mod+space focus mode_toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1 Main"
-set $ws2 "2 Web"
-set $ws3 "3 Work"
-set $ws4 "4 music/discord"
+set $ws1 "1" 
+set $ws2 "2" 
+set $ws3 "3" 
+set $ws4 "4" 
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10 Anything"
+set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -214,13 +210,13 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bar {
-    status_command i3status
-    position top
-    colors {
-        background #000000
-    }
-}
+# bar {
+#     status_command i3status
+#     position top
+#     colors {
+#         background #000000
+#     }
+# }
 
 input "*" {
     pointer_accel 0.6
@@ -228,13 +224,9 @@ input "*" {
     repeat_delay 250
 }
 
-
-exec_always swww-daemon
-
 # Set gaps
 gaps inner 13
 gaps outer 13
-
 
 exec_always {
     export XDG_SESSION_TYPE=wayland
@@ -243,10 +235,13 @@ exec_always {
     export QT_QPA_PLATFORM=wayland
     export SDL_VIDEODRIVER=wayland
 }
-exec_always  swww img /home/william/personal/tokyo.jpg --transition-type fade --transition-duration 2
+exec_always  swww img /home/william/personal/car.jpg --transition-type fade --transition-duration 2
+exec_always swww-daemon
+exec_always mako
+exec_always --no-startup-id pkill waybar && waybar &
 
 blur enable
-blur_radius 6
+blur_radius 9
 blur_passes 2
 blur_brightness 1.0
 blur_contrast 1.0

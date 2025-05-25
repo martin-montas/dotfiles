@@ -41,7 +41,6 @@ o.ignorecase = true
 o.smartcase = true
 g.colorcolumn = true
 
-vim.o.colorcolumn = "80"
 -- Undo and backup options
 o.backup = false
 o.writebackup = false
@@ -60,6 +59,8 @@ g.do_filetype_lua = 1
 g.mapleader = ' '
 g.maplocalleader = ' '
 vim.g.codeium_enabled = true
+
+-- yanks with color
 vim.api.nvim_create_autocmd('TextYankPost', {
    group = vim.api.nvim_create_augroup('highlight_yank', {}),
    desc = 'Highlight selection on yank',
@@ -80,24 +81,10 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.opt.hlsearch = true
 -- vim.api.nvim_command('hi cursorLine guibg=#4B1E22')
--- vim.api.nvim_command('hi Normal guibg=#0f161d')
+vim.api.nvim_command('hi Normal guibg=None')
 -- vim.api.nvim_command('hi StatusLine guibg=#101010 guifg=#131313')
 --
 --
-vim.opt.tabstop = 3       -- Number of spaces that a <Tab> in the file counts for
-vim.opt.shiftwidth = 3    -- Number of spaces to use for each step of (auto)indent
+vim.opt.tabstop = 4       -- Number of spaces that a <Tab> in the file counts for
+vim.opt.shiftwidth = 4    -- Number of spaces to use for each step of (auto)indent
 vim.opt.expandtab = true  -- Use spaces instead of tabs
-
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    local api = require("nvim-tree.api")
-    local args = vim.fn.argv()
-    if #args == 0 then
-      api.tree.open()
-    end
-  end,
-})
-
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-

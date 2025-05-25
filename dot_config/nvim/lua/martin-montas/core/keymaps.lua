@@ -25,7 +25,7 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 
 map('n','<leader>h', ':wincmd h<CR>')
-map('n','<leader>-', ':Explore<CR>')
+map('n','<leader>t', ':NvimTreeToggle<CR>')
 map('n','<leader>j', ':wincmd j<CR>')
 map('n','<leader>k', ':wincmd k<CR>')
 map('n','<leader>l', ':wincmd l<CR>')
