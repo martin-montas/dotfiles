@@ -58,7 +58,7 @@ floating_modifier $mod
 bindsym $mod+Return exec /usr/sbin/ghostty
 
 # start the browser
-bindsym $mod+b exec firefox 
+bindsym $mod+b exec librewolf 
 
 # kill focused window
 bindsym $mod+q kill
@@ -110,7 +110,7 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+m fullscreen toggle
 
-client.focused  #61afef #1a1a1a #c678dd #61afef #61afef
+client.focused  #61afef #1a1a1a #c678dd #c678dd #61afef
 # Backlight control
 bindsym $mod+Shift+o   exec --no-startup-id brightnessctl set +10% && notify-send --urgency=low -r 9999 "󰃠  Brightness: $((($(brightnessctl g)*100)/$(brightnessctl m)))%"
 bindsym $mod+Shift+i   exec --no-startup-id brightnessctl set 10%- && notify-send --urgency=low -r 9999 "󰃠  Brightness: $((($(brightnessctl g)*100)/$(brightnessctl m)))%"
@@ -210,18 +210,20 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# bar {
-#     status_command i3status
-#     position top
-#     colors {
-#         background #000000
-#     }
-# }
+bar {
+    status_command i3status
+    position top
+    colors {
+        background #000000
+    }
+}
 
 input "*" {
     pointer_accel 0.6
     repeat_rate 50
     repeat_delay 250
+    xkb_options "caps:escape"
+
 }
 
 # Set gaps
@@ -238,10 +240,9 @@ exec_always {
 exec_always  swww img /home/william/personal/car.jpg --transition-type fade --transition-duration 2
 exec_always swww-daemon
 exec_always mako
-exec_always --no-startup-id pkill waybar && waybar &
 
 blur enable
-blur_radius 9
+blur_radius 6
 blur_passes 2
 blur_brightness 1.0
 blur_contrast 1.0
