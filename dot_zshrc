@@ -48,9 +48,7 @@ alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
 alias gl='git log'
-
-source $ZSH/oh-my-zsh.sh
-
+alias wakeprox="wakeonlan d0:50:99:61:f0:43"
 # Custom widget to paste from system clipboard
 function zle-paste-clipboard() {
   LBUFFER+=$(wl-paste)
@@ -61,6 +59,7 @@ zle -N zle-paste-clipboard
 # Bind 'p' in vi command mode to the widget
 bindkey -M vicmd 'p' zle-paste-clipboard
 
+source $ZSH/oh-my-zsh.sh
 
 alias metaen='vmrun -T ws start "/home/william/vmware/Metasploitable2-Linux/Metasploitable.vmx" nogui'
 alias metasus='vmrun -T ws suspend "/home/william/vmware/Metasploitable2-Linux/Metasploitable.vmx"'
