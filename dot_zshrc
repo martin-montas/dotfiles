@@ -27,7 +27,10 @@ export VISUAL=nvim
 export HISTSIZE=10000          # Number of commands stored in memory
 export SAVEHIST=10000          # Number of commands saved to the history file
 
-plugins=(git zsh-autosuggestions systemd)
+plugins=(
+    git zsh-autosuggestions systemd
+    kubectl
+   )
 
 export CASE_SENSITIVE=false
 alias vim='nvim'
@@ -42,13 +45,14 @@ alias t='tgpt'
 alias server='python3 -m http.server'
 alias cz='chezmoi'
 alias form='terraform'
-alias em='emacs -nw'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
 alias gl='git log'
 alias wakeprox="wakeonlan d0:50:99:61:f0:43"
+alias nines='k9s'
+alias emacs='/usr/bin/emacsclient -c -a "emacs"'
 # Custom widget to paste from system clipboard
 function zle-paste-clipboard() {
   LBUFFER+=$(wl-paste)
@@ -68,7 +72,7 @@ export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 alias ls='exa --icons' 
 alias l='exa  -la --icons' 
 eval "$(zoxide init zsh)"
-eval "$(oh-my-posh init zsh --config ~/.poshthemes/blue-owl.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.poshthemes/lightgreen.omp.json)"
 
 
 bindkey -v

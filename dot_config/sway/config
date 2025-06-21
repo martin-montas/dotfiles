@@ -12,7 +12,6 @@
 set $first_mon eDP-1
 set $second_mon DP-5 
 #output $second_mon scale 1
-output $second_mon resolution 832x624
 # 1920x1080 @ 60.000 Hz
 # Nordic colors.
 set $black      #191D24
@@ -48,7 +47,7 @@ font pango:Hack Nerd Font Mono 8
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
+# The font above is very space-efficient, that is, it looks , sharp and
 # clear in small sizes. However, its unicode glyph coverage is limited, the old
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
@@ -60,7 +59,7 @@ floating_modifier $mod
 bindsym $mod+Return exec /usr/sbin/ghostty
 
 # start the browser
-bindsym $mod+b exec librewolf 
+bindsym $mod+b exec /usr/sbin/librewolf
 
 # kill focused window
 bindsym $mod+q kill
@@ -80,28 +79,22 @@ default_border none
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+Shift+h focus left
+bindsym $mod+Shift+j focus down
+bindsym $mod+Shift+k focus up
+bindsym $mod+Shift+l focus right
+
+# vi bindings within i3
+bindsym Mod1+j exec wtype -k Down
+bindsym Mod1+k exec wtype -k Up
+bindsym Mod1+h exec wtype -k Left
+bindsym Mod1+l exec wtype -k Right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-
-# move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+g split h
@@ -225,13 +218,12 @@ input "*" {
     pointer_accel 0.6
     repeat_rate 50
     repeat_delay 250
-    xkb_options "caps:escape"
 
 }
 
 # Set gaps
-gaps inner 13
-gaps outer 13
+gaps inner 0
+gaps outer 0
 
 exec_always {
     export XDG_SESSION_TYPE=wayland
@@ -240,13 +232,15 @@ exec_always {
     export QT_QPA_PLATFORM=wayland
     export SDL_VIDEODRIVER=wayland
 }
-exec_always  swww img /home/william/personal/car.jpg --transition-type fade --transition-duration 2
+
+# exec_always  swww img /home/william/personal/car.jpg --transition-type fade --transition-duration 2
+exec_always /usr/bin/emacs --daemon 
 exec_always swww-daemon
 exec_always mako
 
-blur enable
-blur_radius 6
-blur_passes 2
-blur_brightness 1.0
-blur_contrast 1.0
-blur_saturation 1.0
+# blur enable
+# blur_radius 6
+# blur_passes 2
+# blur_brightness 1.0
+# blur_contrast 1.0
+# blur_saturation 1.0
