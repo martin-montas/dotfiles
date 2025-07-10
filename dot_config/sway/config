@@ -68,15 +68,10 @@ bindsym $mod+p exec pamixer --increase 5
 bindsym $mod+o exec pamixer --decrease 5
 bindsym $mod+n exec pamixer --toggle-mute
 
-
 # start dmenu (a program launcher
 bindsym $mod+d exec rofi -show drun
 
 default_border none
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+Shift+h focus left
@@ -110,11 +105,6 @@ client.focused  #61afef #1a1a1a #c678dd #c678dd #61afef
 bindsym $mod+Shift+o   exec --no-startup-id brightnessctl set +10% && notify-send --urgency=low -r 9999 "󰃠  Brightness: $((($(brightnessctl g)*100)/$(brightnessctl m)))%"
 bindsym $mod+Shift+i   exec --no-startup-id brightnessctl set 10%- && notify-send --urgency=low -r 9999 "󰃠  Brightness: $((($(brightnessctl g)*100)/$(brightnessctl m)))%"
 
-# uses the mute and unmute on the computer
-bindsym $mod+Shift+m   exec  pactl set-source-mute 1 1
-bindsym $mod+Shift+u   exec  pactl set-source-mute 1 0
-
-# audio
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
@@ -201,8 +191,6 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-
-
 bindsym $mod+r mode "resize"
 
 bar {
@@ -237,10 +225,5 @@ exec_always {
 exec_always /usr/bin/emacs --daemon 
 exec_always swww-daemon
 exec_always mako
+exec ~/.local/bin/suricata-alert-notify.sh
 
-# blur enable
-# blur_radius 6
-# blur_passes 2
-# blur_brightness 1.0
-# blur_contrast 1.0
-# blur_saturation 1.0

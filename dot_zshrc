@@ -1,11 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 export HISTFILE=~/.zsh_history
 
-# Prevent multiple sourcing
-if [[ -z "$ZSHRC_ALREADY_SOURCED" ]]; then
-  export ZSHRC_ALREADY_SOURCED=1
-  source ~/.zshrc
-fi
 export GOPATH=$HOME/go
 export PATH=/home/william//bin:/usr/sbin/:/home/william/bin:/usr/sbin/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games/
 export PATH=$PATH:~/go/bin
@@ -65,14 +60,14 @@ bindkey -M vicmd 'p' zle-paste-clipboard
 
 source $ZSH/oh-my-zsh.sh
 
-alias metaen='vmrun -T ws start "/home/william/vmware/Metasploitable2-Linux/Metasploitable.vmx" nogui'
-alias metasus='vmrun -T ws suspend "/home/william/vmware/Metasploitable2-Linux/Metasploitable.vmx"'
+alias vmen='VBoxManage startvm "Ubuntu 22.04 (64bit)" --type headless'
+alias vmsus='VBoxManage controlvm "Ubuntu 22.04 (64bit)" savestate'
+
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 
 alias ls='exa --icons' 
 alias l='exa  -la --icons' 
 eval "$(zoxide init zsh)"
 eval "$(oh-my-posh init zsh --config ~/.poshthemes/lightgreen.omp.json)"
-
 
 bindkey -v
