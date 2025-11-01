@@ -61,6 +61,7 @@ return {
         end
         -- ✅ Initialize mason-lspconfig before using setup_handlers
         mason_lspconfig.setup()
+
         mason_lspconfig.setup_handlers({
             -- Default handler for installed servers
             function(server_name)

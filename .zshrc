@@ -99,8 +99,12 @@ alias l='eza -la --icons --group-directories-first'    # show hidden files
 alias ls='eza  --icons --group-directories-first'    # show hidden files
 alias lt='eza -T --icons'                               # tree view
 
-alias nines='k9s'
 alias gs='git status'
+alias k='kubectl'
+
+
+alias runvm='sudo modprobe vmw_vmci; vmrun -T ws start "/home/william/vmware/Ubuntu-22.04-64bit-VMware/Ubuntu-22.04-64bit-VMware.vmx" nogui'
+alias susvm='vmrun -T ws suspend "/home/william/vmware/Ubuntu-22.04-64bit-VMware/Ubuntu-22.04-64bit-VMware.vmx"'
 
 
 # Compilation flags
@@ -117,6 +121,19 @@ alias gs='git status'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+# Add this to your shell config file (~/.bashrc, ~/.zshrc, etc.)
+
+kstage() {
+  export KUBECONFIG=/home/william/.kube/pi-stage.yaml
+  echo "Switched to pi-stage 🚀"
+}
+
+kprod() {
+  export KUBECONFIG=/home/william/.kube/pi-prod.yaml
+  echo "Switched to pi-prod 🏭"
+}
 
 paste_from_clipboard() { LBUFFER+=$(wl-paste); }
 zle -N paste_from_clipboard
