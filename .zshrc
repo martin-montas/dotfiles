@@ -5,6 +5,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export TERM=xterm-256color
 export PATH=$PATH:~/.dotbare
+export KUBECONFIG=/home/william/.kube/config
 alias dotbare='git --git-dir=$HOME/.dotbare/repo/ --work-tree=$HOME'
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -101,6 +102,7 @@ alias lt='eza -T --icons'                               # tree view
 
 alias gs='git status'
 alias k='kubectl'
+alias nines='k9s'
 
 
 alias runvm='sudo modprobe vmw_vmci; vmrun -T ws start "/home/william/vmware/Ubuntu-22.04-64bit-VMware/Ubuntu-22.04-64bit-VMware.vmx" nogui'
@@ -123,20 +125,13 @@ alias susvm='vmrun -T ws suspend "/home/william/vmware/Ubuntu-22.04-64bit-VMware
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-# Add this to your shell config file (~/.bashrc, ~/.zshrc, etc.)
-
-kstage() {
-  export KUBECONFIG=/home/william/.kube/pi-stage.yaml
-  echo "Switched to pi-stage 🚀"
-}
-
-kprod() {
-  export KUBECONFIG=/home/william/.kube/pi-prod.yaml
-  echo "Switched to pi-prod 🏭"
-}
 
 paste_from_clipboard() { LBUFFER+=$(wl-paste); }
 zle -N paste_from_clipboard
 bindkey -M viins '^P' paste_from_clipboard
 
 bindkey -v
+alias ks="kubectl config --kubeconfig=$HOME/.kube/config use-context staging-context"
+alias kp="kubectl config --kubeconfig=$HOME/.kube/config use-context production-context"
+alias ks="kubectl config --kubeconfig=$HOME/.kube/config use-context staging-context"
+alias kp="kubectl config --kubeconfig=$HOME/.kube/config use-context production-context"

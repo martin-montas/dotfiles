@@ -35,7 +35,7 @@ font-size = 14
 # key= value
 # key =value
 # key = value
-theme ="TokyoNight Night"
+theme ="CGA"
 # # Any line beginning with a # is a comment. It's not possible to put
 # # a comment after a config option, since it would be interpreted as a
 # # part of the value. For example, this will have a value of "#123abc":
@@ -49,5 +49,5 @@ theme ="TokyoNight Night"
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-
+foreground="#FFFF55"
 command = "/bin/sh -c 'tmux ; $SHELL'"

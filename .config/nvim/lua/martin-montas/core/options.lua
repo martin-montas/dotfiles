@@ -80,11 +80,10 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.opt.hlsearch = true
--- vim.api.nvim_command('hi cursorLine guibg=#4B1E22')
-vim.api.nvim_command("hi Normal guibg=None")
--- vim.api.nvim_command('hi StatusLine guibg=#101010 guifg=#131313')
---
---
+vim.api.nvim_command('hi cursorLine guibg=#4B1E22')
+vim.api.nvim_command("hi Normal guibg=#808080")
+vim.api.nvim_command('hi StatusLine guibg=#101010 guifg=#131313')
+
 vim.opt.tabstop = 4 -- Number of spaces that a <Tab> in the file counts for
 vim.opt.shiftwidth = 4 -- Number of spaces to use for each step of (auto)indent
 vim.opt.expandtab = true -- Use spaces instead of tabs
