@@ -33,6 +33,7 @@ return {
         "gitignore",
         "c",
         "cpp",
+        "go",
 
       },
       incremental_selection = {

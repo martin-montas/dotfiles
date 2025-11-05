@@ -217,4 +217,4 @@ input "type:keyboard" {
 client.focused          #2e3436 #2e3436 #ffffff #2e3436   #2e3436
 
 # i3 lock for when closing the laptop
-output * background $HOME/personal/red-mountains.jpg fill
+#output * background $HOME/personal/red-mountains.jpg fill

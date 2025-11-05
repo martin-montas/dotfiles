@@ -124,14 +124,10 @@ alias susvm='vmrun -T ws suspend "/home/william/vmware/Ubuntu-22.04-64bit-VMware
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-
 paste_from_clipboard() { LBUFFER+=$(wl-paste); }
 zle -N paste_from_clipboard
 bindkey -M viins '^P' paste_from_clipboard
 
 bindkey -v
-alias ks="kubectl config --kubeconfig=$HOME/.kube/config use-context staging-context"
-alias kp="kubectl config --kubeconfig=$HOME/.kube/config use-context production-context"
 alias ks="kubectl config --kubeconfig=$HOME/.kube/config use-context staging-context"
 alias kp="kubectl config --kubeconfig=$HOME/.kube/config use-context production-context"
