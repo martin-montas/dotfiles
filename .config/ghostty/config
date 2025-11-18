@@ -49,5 +49,5 @@ theme ="CGA"
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-foreground="#FFFF55"
+foreground="#AA5500"
 command = "/bin/sh -c 'tmux ; $SHELL'"

@@ -73,7 +73,7 @@ ZSH_THEME="eastwood"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git systemd)
 
 source $ZSH/oh-my-zsh.sh
 # Initialize zoxide for Zsh
@@ -99,10 +99,10 @@ alias ll='eza -lh --icons --group-directories-first'    # long list
 alias l='eza -la --icons --group-directories-first'    # show hidden files
 alias ls='eza  --icons --group-directories-first'    # show hidden files
 alias lt='eza -T --icons'                               # tree view
+alias proxwake="wakeonlan -i 10.0.0.255 d0:50:99:61:f0:43"
 
 alias gs='git status'
 alias k='kubectl'
-alias nines='k9s'
 
 
 alias runvm='sudo modprobe vmw_vmci; vmrun -T ws start "/home/william/vmware/Ubuntu-22.04-64bit-VMware/Ubuntu-22.04-64bit-VMware.vmx" nogui'
