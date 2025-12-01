@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Define the command and title
+TERMINAL_APP="ghostty"
+WINDOW_TITLE="unimatrix"
+COMMAND_TO_RUN="unimatrix --speed 95"
+
+# 1. Launch the new terminal with a specific title in the background (&)
+exec $TERMINAL_APP --title="$WINDOW_TITLE" -e $COMMAND_TO_RUN &
+
+# 2. Wait briefly for the window to spawn and automatically gain focus in Sway
+sleep 1
+
+# 3. Tell Sway to focus the new window and make it fullscreen
+#    We combine criteria in Sway using spaces within the same brackets [criteria1 criteria2]
+swaymsg [app_id=\"com.mitchellh.ghostty\" title=\"$WINDOW_TITLE\"] focus, fullscreen toggle

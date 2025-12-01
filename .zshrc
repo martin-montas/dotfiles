@@ -6,6 +6,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export TERM=xterm-256color
 export PATH=$PATH:~/.dotbare
 export KUBECONFIG=/home/william/.kube/config
+export EDITOR='nvim'
 alias dotbare='git --git-dir=$HOME/.dotbare/repo/ --work-tree=$HOME'
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -99,7 +100,7 @@ alias ll='eza -lh --icons --group-directories-first'    # long list
 alias l='eza -la --icons --group-directories-first'    # show hidden files
 alias ls='eza  --icons --group-directories-first'    # show hidden files
 alias lt='eza -T --icons'                               # tree view
-alias proxwake="wakeonlan -i 10.0.0.255 d0:50:99:61:f0:43"
+alias nines='k9s'
 
 alias gs='git status'
 alias k='kubectl'
@@ -131,3 +132,5 @@ bindkey -M viins '^P' paste_from_clipboard
 bindkey -v
 alias ks="kubectl config --kubeconfig=$HOME/.kube/config use-context staging-context"
 alias kp="kubectl config --kubeconfig=$HOME/.kube/config use-context production-context"
+
+neofetch
