@@ -95,6 +95,7 @@ eval "$(zoxide init zsh)"
 
 alias vim='nvim'
 alias v='nvim'
+alias ts='tailscale'
 alias vi='nvim'
 alias ll='eza -lh --icons --group-directories-first'    # long list
 alias l='eza -la --icons --group-directories-first'    # show hidden files
@@ -134,3 +135,4 @@ alias ks="kubectl config --kubeconfig=$HOME/.kube/config use-context staging-con
 alias kp="kubectl config --kubeconfig=$HOME/.kube/config use-context production-context"
 
 neofetch
+export PATH="$HOME/.cargo/bin:$PATH"
