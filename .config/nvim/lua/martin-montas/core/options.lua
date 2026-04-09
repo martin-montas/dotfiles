@@ -6,7 +6,7 @@ vim.api.nvim_command('set nowrap')
 vim.api.nvim_command('filetype plugin indent on')
 o.termguicolors = false
 g.background = 'dark'
-vim.api.nvim_command('colorscheme broduo')
+vim.api.nvim_command('colorscheme default')
 vim.api.nvim_command('syntax on')
 -- vim.api.nvim_command('highlight CursorLine ctermbg=')
 
