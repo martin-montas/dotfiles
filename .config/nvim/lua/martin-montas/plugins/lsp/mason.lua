@@ -32,12 +32,9 @@ return {
 
     mason_tool_installer.setup({
       ensure_installed = {
-<<<<<<< HEAD
         "stylua", -- lua formatter
         "isort", -- python formatter
         "black", -- python formatter
-=======
->>>>>>> f83d8dd (current commit: 20206)
       },
     })
   end,
