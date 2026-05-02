@@ -62,6 +62,7 @@ return {
         -- ✅ Initialize mason-lspconfig before using setup_handlers
         mason_lspconfig.setup()
 
+<<<<<<< HEAD
         mason_lspconfig.setup_handlers({
             -- Default handler for installed servers
             function(server_name)
@@ -115,6 +116,61 @@ return {
                 })
             end,
         })
+=======
+        -- mason_lspconfig.setup_handlers({
+        --     -- Default handler for installed servers
+        --     function(server_name)
+        --         lspconfig[server_name].setup({
+        --             capabilities = capabilities,
+        --         })
+        --     end,
+        --     ["lua_ls"] = function()
+        --         -- Configure Lua server (with special settings)
+        --         lspconfig["lua_ls"].setup({
+        --             capabilities = capabilities,
+        --             settings = {
+        --                 Lua = {
+        --                     -- Make the language server recognize "vim" global
+        --                     diagnostics = {
+        --                         globals = { "vim" },
+        --                     },
+        --                     completion = {
+        --                         callSnippet = "Replace",
+        --                     },
+        --                 },
+        --             },
+        --         })
+        --     end,
+        --     ["gopls"] = function()
+        --         lspconfig["gopls"].setup({
+        --             capabilities = capabilities,
+        --             on_attach = function(client, bufnr)
+        --                 -- Format on save
+        --                 if client.server_capabilities.documentFormattingProvider then
+        --                     vim.api.nvim_create_autocmd("BufWritePre", {
+        --                         buffer = bufnr,
+        --                         callback = function()
+        --                             vim.lsp.buf.format({ async = false })
+        --                         end,
+        --                     })
+        --                 end
+        --             end,
+        --             settings = {
+        --                 gopls = {
+        --                     gofumpt = true, -- Stricter gofmt (optional)
+        --                     analyses = {
+        --                         unusedparams = true,
+        --                         nilness = true,
+        --                         unusedwrite = true,
+        --                         -- fieldalignment = true,
+        --                     },
+        --                     staticcheck = true,
+        --                 },
+        --             },
+        --         })
+        --     end,
+        -- })
+>>>>>>> f83d8dd (current commit: 20206)
     end,
 }
 

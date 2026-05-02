@@ -7,6 +7,7 @@ export TERM=xterm-256color
 export PATH=$PATH:~/.dotbare
 export KUBECONFIG=/home/william/.kube/config
 export EDITOR='nvim'
+<<<<<<< HEAD
 alias dotbare='git --git-dir=$HOME/.dotbare/repo/ --work-tree=$HOME'
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -74,6 +75,12 @@ ZSH_THEME="eastwood"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+=======
+export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
+QT_QPA_PLATFORMTHEME=qt5ct 
+ZSH_THEME="eastwood"
+
+>>>>>>> f83d8dd (current commit: 20206)
 plugins=(git systemd)
 
 source $ZSH/oh-my-zsh.sh
@@ -81,6 +88,7 @@ source $ZSH/oh-my-zsh.sh
 eval "$(zoxide init zsh)"
 # User configuration
 
+<<<<<<< HEAD
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -97,6 +105,13 @@ alias vim='nvim'
 alias v='nvim'
 alias ts='tailscale'
 alias vi='nvim'
+=======
+
+alias vim='/home/william/nvim/bin/nvim'
+alias v='/home/william/nvim/bin/nvim'
+alias ts='tailscale'
+alias vi='/home/william/nvim/bin/nvim'
+>>>>>>> f83d8dd (current commit: 20206)
 alias ll='eza -lh --icons --group-directories-first'    # long list
 alias l='eza -la --icons --group-directories-first'    # show hidden files
 alias ls='eza  --icons --group-directories-first'    # show hidden files
@@ -106,6 +121,7 @@ alias nines='k9s'
 alias gs='git status'
 alias k='kubectl'
 
+<<<<<<< HEAD
 
 alias runvm='sudo modprobe vmw_vmci; vmrun -T ws start "/home/william/vmware/Ubuntu-22.04-64bit-VMware/Ubuntu-22.04-64bit-VMware.vmx" nogui'
 alias susvm='vmrun -T ws suspend "/home/william/vmware/Ubuntu-22.04-64bit-VMware/Ubuntu-22.04-64bit-VMware.vmx"'
@@ -126,13 +142,28 @@ alias susvm='vmrun -T ws suspend "/home/william/vmware/Ubuntu-22.04-64bit-VMware
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+=======
+alias runvm='sudo modprobe vmw_vmci; vmrun -T ws start "/home/william/vmware/Ubuntu-22.04-64bit-VMware/Ubuntu-22.04-64bit-VMware.vmx" nogui'
+alias susvm='vmrun -T ws suspend "/home/william/vmware/Ubuntu-22.04-64bit-VMware/Ubuntu-22.04-64bit-VMware.vmx"'
+
+>>>>>>> f83d8dd (current commit: 20206)
 paste_from_clipboard() { LBUFFER+=$(wl-paste); }
 zle -N paste_from_clipboard
 bindkey -M viins '^P' paste_from_clipboard
 
+<<<<<<< HEAD
+=======
+
+#eval "$(oh-my-posh init zsh)"
+eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/clean-detailed.omp.json)"
+>>>>>>> f83d8dd (current commit: 20206)
 bindkey -v
 alias ks="kubectl config --kubeconfig=$HOME/.kube/config use-context staging-context"
 alias kp="kubectl config --kubeconfig=$HOME/.kube/config use-context production-context"
 
 neofetch
+<<<<<<< HEAD
 export PATH="$HOME/.cargo/bin:$PATH"
+=======
+export PATH="$HOME/.dotbare:$PATH"
+>>>>>>> f83d8dd (current commit: 20206)
