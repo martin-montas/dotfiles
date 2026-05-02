@@ -30,7 +30,7 @@ alias ll='eza -lh --icons --group-directories-first'    # long list
 alias l='eza -la --icons --group-directories-first'    # show hidden files
 alias ls='eza  --icons --group-directories-first'    # show hidden files
 alias lt='eza -T --icons'                               # tree view
-alias nines='k9s'
+alias db='dotbare'
 
 alias gs='git status'
 alias k='kubectl'
