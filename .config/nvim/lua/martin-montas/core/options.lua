@@ -78,6 +78,11 @@ vim.api.nvim_create_autocmd("FileType", {
         ]])
 	end,
 })
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'go' ,'python', 'lua', 'bash' },
+  callback = function() vim.treesitter.start() end,
+})
+
 
 vim.opt.hlsearch = true
 vim.api.nvim_command('hi cursorLine guibg=#4B1E22')
@@ -87,9 +92,5 @@ vim.api.nvim_command('hi StatusLine guibg=#101010 guifg=#131313')
 vim.opt.tabstop = 8 -- Number of spaces that a <Tab> in the file counts for
 vim.opt.shiftwidth = 8 -- Number of spaces to use for each step of (auto)indent
 vim.opt.expandtab = true -- Use spaces instead of tabs
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "c", "lua", "python", "go" },
-  callback = function()
-    vim.treesitter.start()
-  end,
-})
+
+

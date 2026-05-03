@@ -1,2 +1,4 @@
-require("plugins.colorscheme").setup()
-require("plugins.blank-lines").setup()
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+require("martin-montas.lazy")
