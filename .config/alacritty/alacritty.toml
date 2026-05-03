@@ -18,9 +18,13 @@ blur = false
 history = 10000
 multiplier = 3
 
+
+[font]
+size   = 11.0
+
 [font.normal]
 family = "Hack"
-style="Regular"
+style  = "Regular"
 
 [bell]
 animation = "Linear"
