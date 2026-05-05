@@ -164,17 +164,14 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 
-
-
-
-# default workspaces
-workspace 1 output eDP-1
-workspace 2 output DP-5
+bindsym $mod+Shift+m exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # default workspaces
-workspace 1 output eDP-1
-workspace 2 output DP-5
-workspace 3 output DP-5
+workspace 1 output      eDP-1
+workspace 2 output      DP-5
+workspace 3 output      DP-5
+workspace 5 output      DP-5
+workspace 10 output     DP-5
 
 # reload the configuration file
 bindsym $mod+Shift+r reload
@@ -184,12 +181,7 @@ bindsym $mod+Shift+e exec "swaymsg exit"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
@@ -238,5 +230,6 @@ client.focused          #2e3436 #2e3436 #ffffff #2e3436   #2e3436
 
 output * bg /home/william/personal/black.jpg fill
 exec_always --no-startup-id dbus-launch --sh-syntax
+exec  /usr/bin/mozillavpn
 
 exec_always mako
