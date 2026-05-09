@@ -1,9 +1,11 @@
-font-family = IPAEXGothic
+gtk-single-instance = true
+
+font-family = Hack
 font-size = 12
 
 theme ="CGA"
 
-# term = xterm-kitty
-
-foreground="#AA5500"
-command = "/bin/sh -c 'tmux ; $SHELL'"
+term = xterm-256color
+cursor-style = block
+#foreground="#AA5500"
+command = tmux new-session -A 

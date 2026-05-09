@@ -5,7 +5,7 @@ export PATH=$HOME/bin:$HOME/.local/bin:/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 export TERM=xterm-256color
 export PATH=$PATH:~/.dotbare
-export KUBECONFIG=/home/william/.kube/config
+export KUBECONFIG=$HOME/.kube/config
 export EDITOR='nvim'
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="eastwood"
@@ -18,6 +18,14 @@ source $ZSH/oh-my-zsh.sh
 # Initialize zoxide for Zsh
 eval "$(zoxide init zsh)"
 # User configuration
+
+
+# the 2 are for ghostty
+export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+export DBUS_SESSION_BUS_ADDRESS="unix:path=${XDG_RUNTIME_DIR}/bus"
+
+bindkey "^M" accept-line
+bindkey "^J" accept-line
 
 
 alias vim='nvim'
@@ -35,11 +43,6 @@ alias db='dotbare'
 alias gs='git status'
 alias k='kubectl'
 
-alias runvm='sudo modprobe vmw_vmci; vmrun -T ws start "/home/william/vmware/Ubuntu-22.04-64bit-VMware/Ubuntu-22.04-64bit-VMware.vmx" nogui'
-alias susvm='vmrun -T ws suspend "/home/william/vmware/Ubuntu-22.04-64bit-VMware/Ubuntu-22.04-64bit-VMware.vmx"'
-
-alias runvm='sudo modprobe vmw_vmci; vmrun -T ws start "/home/william/vmware/Ubuntu-22.04-64bit-VMware/Ubuntu-22.04-64bit-VMware.vmx" nogui'
-alias susvm='vmrun -T ws suspend "/home/william/vmware/Ubuntu-22.04-64bit-VMware/Ubuntu-22.04-64bit-VMware.vmx"'
 
 paste_from_clipboard() { LBUFFER+=$(wl-paste); }
 zle -N paste_from_clipboard

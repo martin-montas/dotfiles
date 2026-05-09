@@ -47,7 +47,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec /usr/bin/alacritty
+bindsym $mod+Return exec /usr/bin/ghostty
 
 # start the browser
 bindsym $mod+b exec --no-startup-id /usr/bin/librewolf
@@ -104,6 +104,9 @@ bindsym $mod+Shift+o   exec --no-startup-id brightnessctl set +10% && notify-sen
 bindsym $mod+Shift+i   exec --no-startup-id brightnessctl set 10%- && notify-send --urgency=low -r 9999 "󰃠  Brightness: $((($(brightnessctl g)*100)/$(brightnessctl m)))%"
 # browser profile command
 bindsym $mod+p  exec --no-startup-id /usr/bin/librewolf -P
+
+
+bindsym $mod+c exec QT_QPA_PLATFORM=xcb  $HOME/.local/bin/cutter
 
 # audio
 bindsym $mod+u exec /usr/bin/alacritty  -e 'alsamixer'

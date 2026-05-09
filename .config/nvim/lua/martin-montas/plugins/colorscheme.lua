@@ -2,7 +2,7 @@ return {
         'rockerBOO/boo-colorscheme-nvim',
         priority = 1000,
         config = function()
-                vim.cmd.colorscheme("industry")
+                vim.cmd.colorscheme("bruh")
                 -- vim.api.nvim_command("hi Normal guibg=#121213")
                 -- vim.api.nvim_command("hi StatusLine guibg=#757575 guifg=#131313")
         end,

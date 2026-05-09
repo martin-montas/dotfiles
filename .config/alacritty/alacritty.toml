@@ -1,9 +1,8 @@
 import = []
 
 live_config_reload = true
-
-[shell]
-program = "/usr/bin/tmux"
+# [shell]
+# program = "/usr/bin/tmux"
 
 [window]
 startup_mode = "Windowed"
@@ -54,3 +53,10 @@ background = '#000000'
 # Normal colors
 [colors.normal]
 black   = '#000000'
+
+
+# [keyboard]
+# bindings = [
+#   { key = "O", mods = "Shift", chars = "\u001b[19~" },
+#   { key = "I", mods = "Shift", chars = "\u001b[18~" }
+# ]
