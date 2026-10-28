@@ -1,11 +1,12 @@
 #!/bin/bash
 
-IFACE="wlp2s0"
+IFACE="wlp0s20f3"
 
-data=$(vnstat -i "$IFACE" --oneline 2>/dev/null)
+data=$(vnstat -i "$IFACE" --oneline)
 
-iface=$(echo "$data" | awk -F';' '{print $2}')
-rx=$(echo "$data" | awk -F';' '{print $4}')
-tx=$(echo "$data" | awk -F';' '{print $5}')
+if [[ -z "$data" ]]; then
+    echo "↓ N/A ↑ N/A"
+    exit 1
+fi
 
-echo "↓$rx ↑$tx"
+echo "$data" | awk -F';' '{printf "↓%s ↑%s\n", $4, $5}'
