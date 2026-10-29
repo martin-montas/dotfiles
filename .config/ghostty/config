@@ -10,6 +10,6 @@ theme = CGA
 
 term = xterm-256color
 cursor-style = block
-#foreground="#A85400"
+foreground= "#868686"
 command = tmux new-session -A 
 
