@@ -1,9 +1,14 @@
 return {
-        'rockerBOO/boo-colorscheme-nvim',
-        priority = 1000,
-        config = function()
-                vim.cmd.colorscheme("desert")
-                vim.api.nvim_command("hi Normal guifg=#a5a5a5")
-                vim.api.nvim_command("hi StatusLine guibg=#757575 guifg=#131313")
-        end,
+    "craftzdog/solarized-osaka.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+        style = "night",
+        transparent = false,
+        terminal_colors = true,
+    },
+    config = function(_, opts)
+        require("solarized-osaka").setup(opts)
+        vim.cmd.colorscheme("solarized-osaka-vivid")
+    end,
 }

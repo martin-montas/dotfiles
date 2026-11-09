@@ -229,10 +229,11 @@ input "type:keyboard" {
 # finds out, if available)
 client.focused          #2e3436 #2e3436 #ffffff #2e3436   #2e3436
 
-#output * background $HOME/personal/red-mountains.jpg fill
+output * bg /home/william/personal/black.jpg fill
 
-# output * bg /home/william/personal/black.jpg fill
 exec_always --no-startup-id dbus-launch --sh-syntax
 exec  /usr/bin/mozillavpn
 
 exec_always mako
+
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SWAY

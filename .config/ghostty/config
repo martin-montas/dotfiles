@@ -3,13 +3,14 @@ gtk-single-instance = true
 # font-family = Fantasque Sans Mono
 font-family = Hack  
 font-style = Regular
-font-size = 14.0
+font-size = 16.0
 
 # ghostty +list-themes to change theme
 theme = CGA
 
 term = xterm-256color
 cursor-style = block
+# background-opacity = 0.70
 foreground= "#868686"
 command = tmux new-session -A 
 

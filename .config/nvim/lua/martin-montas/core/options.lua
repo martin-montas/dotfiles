@@ -4,6 +4,7 @@ local o = vim.o
 vim.api.nvim_command("set jumpoptions+=view")
 vim.api.nvim_command("set nowrap")
 vim.api.nvim_command("filetype plugin indent on")
+-- vim.api.nvim_command("colorscheme solarized-osaka")
 o.termguicolors = true
 g.background = "dark"
 vim.api.nvim_command("syntax on")
@@ -79,14 +80,14 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'go' ,'python', 'lua', 'bash', "c","cpp" },
+  pattern = { 'go' ,'python', 'lua', 'bash', "c","cpp", "zig" },
   callback = function() vim.treesitter.start() end,
 })
 
 vim.opt.hlsearch = true
-vim.api.nvim_command('hi cursorLine guibg=#4B1E22')
-vim.api.nvim_command("hi Normal guibg=#808080")
-vim.api.nvim_command('hi StatusLine guibg=#101010 guifg=#131313')
+-- vim.api.nvim_command('hi cursorLine guibg=#4B1E22')
+-- vim.api.nvim_command("hi Normal guibg=#808080")
+-- vim.api.nvim_command('hi StatusLine guibg=#101010 guifg=#131313')
 
 vim.opt.tabstop = 8 -- Number of spaces that a <Tab> in the file counts for
 vim.opt.shiftwidth = 8 -- Number of spaces to use for each step of (auto)indent
