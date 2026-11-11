@@ -10,25 +10,25 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 # Nordic colors.
-set $black      #191D24
-set $gray0      #242933
-set $gray1      #2E3440
-set $gray2      #3B4252
-set $gray3      #434C5E
-set $gray4      #4C566A
-set $gray5      #60728A
-set $white0     #D8DEE9
-set $white1     #E5E9F0
-set $white2     #ECEFF4
-set $blue0      #5E81AC
-set $blue1      #81A1C1
-set $blue2      #88C0D0
-set $cyan       #8FBCBB
-set $red        #BF616A
-set $orange     #D08770
-set $yellow     #EBCB8B
-set $green      #A3BE8C
-set $magenta    #B48EAD
+# set $black      #191D24
+# set $gray0      #242933
+# set $gray1      #2E3440
+# set $gray2      #3B4252
+# set $gray3      #434C5E
+# set $gray4      #4C566A
+# set $gray5      #60728A
+# set $white0     #D8DEE9
+# set $white1     #E5E9F0
+# set $white2     #ECEFF4
+# set $blue0      #5E81AC
+# set $blue1      #81A1C1
+# set $blue2      #88C0D0
+# set $cyan       #8FBCBB
+# set $red        #BF616A
+# set $orange     #D08770
+# set $yellow     #EBCB8B
+# set $green      #A3BE8C
+# set $magenta    #B48EAD
 
 set $mod Mod1
 
@@ -227,7 +227,7 @@ input "type:keyboard" {
     repeat_delay 325
 }
 # finds out, if available)
-client.focused          #2e3436 #2e3436 #ffffff #2e3436   #2e3436
+client.focused          #285577 #285577 #ffffff #2e3436 #285577
 
 output * bg /home/william/personal/black.jpg fill
 
