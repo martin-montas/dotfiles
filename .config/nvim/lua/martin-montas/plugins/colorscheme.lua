@@ -9,6 +9,8 @@ return {
     },
     config = function(_, opts)
         require("solarized-osaka").setup(opts)
-        vim.cmd.colorscheme("solarized-osaka-vivid")
+        vim.cmd.colorscheme("solarized-osaka")
+
+        vim.api.nvim_command('hi StatusLine guibg=#626262 guifg=#131313')
     end,
 }

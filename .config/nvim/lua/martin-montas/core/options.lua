@@ -63,32 +63,32 @@ vim.g.codeium_enabled = true
 
 -- yanks with color
 vim.api.nvim_create_autocmd("TextYankPost", {
-	group = vim.api.nvim_create_augroup("highlight_yank", {}),
-	desc = "Highlight selection on yank",
-	pattern = "*",
-	callback = function()
-		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 150 })
-	end,
+    group = vim.api.nvim_create_augroup("highlight_yank", {}),
+    desc = "Highlight selection on yank",
+    pattern = "*",
+    callback = function()
+        vim.highlight.on_yank({ higroup = "IncSearch", timeout = 150 })
+    end,
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "markdown",
-	callback = function()
-		vim.cmd([[
+    pattern = "markdown",
+    callback = function()
+        vim.cmd([[
         highlight @markup.strong gui=bold guifg=#FF0000 cterm=bold ctermfg=Red
         ]])
-	end,
+    end,
 })
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'go' ,'python', 'lua', 'bash', "c","cpp", "zig" },
-  callback = function() vim.treesitter.start() end,
+    pattern = { 'go' ,'python', 'lua', 'bash', "c","cpp", "zig" },
+    callback = function() vim.treesitter.start() end,
 })
 
 vim.opt.hlsearch = true
 -- vim.api.nvim_command('hi cursorLine guibg=#4B1E22')
 -- vim.api.nvim_command("hi Normal guibg=#808080")
--- vim.api.nvim_command('hi StatusLine guibg=#101010 guifg=#131313')
+vim.api.nvim_command('hi StatusLine guibg=#101010 guifg=#131313')
 
-vim.opt.tabstop = 8 -- Number of spaces that a <Tab> in the file counts for
-vim.opt.shiftwidth = 8 -- Number of spaces to use for each step of (auto)indent
+vim.opt.tabstop = 4 -- Number of spaces that a <Tab> in the file counts for
+vim.opt.shiftwidth = 4 -- Number of spaces to use for each step of (auto)indent
 vim.opt.expandtab = true -- Use spaces instead of tabs

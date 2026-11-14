@@ -17,7 +17,7 @@ export SDL_VIDEODRIVER=wayland
 export LS_COLORS="di=94"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="rixius"
-ZSH_THEME="fino-time"
+ZSH_THEME="dallas"
 
 
 plugins=(git systemd ufw ansible)

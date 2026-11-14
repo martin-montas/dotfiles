@@ -6,7 +6,7 @@ font-style = Regular
 font-size = 16.0
 
 # ghostty +list-themes to change theme
-theme = CGA
+theme = Solarized Dark Higher Contrast
 
 term = xterm-256color
 cursor-style = block
