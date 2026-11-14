@@ -1,12 +1,12 @@
 gtk-single-instance = true
 
 # font-family = Fantasque Sans Mono
-font-family = Hack  
-font-style = Regular
-font-size = 16.0
+font-family = Hack Nerd Font Mono
+font-style = Italic
+font-size = 20.0
 
 # ghostty +list-themes to change theme
-theme = Solarized Dark Higher Contrast
+theme = TokyoNight Storm
 
 term = xterm-256color
 cursor-style = block
