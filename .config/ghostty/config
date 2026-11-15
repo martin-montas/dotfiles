@@ -6,7 +6,7 @@ font-style = Italic
 font-size = 20.0
 
 # ghostty +list-themes to change theme
-theme = TokyoNight Storm
+theme = CGA
 
 term = xterm-256color
 cursor-style = block

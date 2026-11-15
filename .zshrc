@@ -40,7 +40,7 @@ alias vim='nvim'
 alias v='nvim'
 alias vi='nvim'
 alias ts='tailscale'
-alias em='emacs -nw'
+alias code='zed'
 
 alias ts='tailscale'
 alias ll='eza --icons -l'    # long list
