@@ -217,11 +217,12 @@ set $opacity 0.9
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
 
-
 # gaps
 gaps inner 0px
 
-
+blur enable
+blur_passes 3
+blur_radius 3
 input "type:keyboard" {
     repeat_rate 50
     repeat_delay 325
@@ -229,8 +230,8 @@ input "type:keyboard" {
 # finds out, if available)
 client.focused          #285577 #285577 #ffffff #2e3436 #285577
 
-output * bg /home/william/personal/black.jpg fill
-
+output * bg /home/william/personal/red-mountain.jpg fill
+default_border pixel 0
 exec_always --no-startup-id dbus-launch --sh-syntax
 exec  /usr/bin/mozillavpn
 

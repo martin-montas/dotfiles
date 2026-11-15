@@ -76,6 +76,7 @@ bindkey -v
 bindkey -M viins '^[[91;5u' vi-cmd-mode
 bindkey -M vicmd '^[[91;5u' vi-cmd-mode
 alias db="dotbare"
+eval "$(starship init zsh)"
 
 [ -f "/home/william/.ghcup/env" ] && . "/home/william/.ghcup/env" # ghcup-env
-fastfetch
+# fastfetch

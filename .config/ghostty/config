@@ -6,11 +6,11 @@ font-style = Italic
 font-size = 20.0
 
 # ghostty +list-themes to change theme
-theme = CGA
+theme = Catppuccin Mocha
 
 term = xterm-256color
 cursor-style = block
-# background-opacity = 0.70
+background-opacity = 0.9
 foreground= "#868686"
 command = tmux new-session -A 
 
