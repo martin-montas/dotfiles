@@ -1,16 +1,16 @@
 gtk-single-instance = true
 
-# font-family = Fantasque Sans Mono
-font-family = Hack Nerd Font Mono
-font-style = Italic
-font-size = 20.0
+## font-family = Fantasque Sans Mono
+font-family = JetBrains Mono NL 
+font-size = 18
+font-style = Regular
 
 # ghostty +list-themes to change theme
-theme = Catppuccin Mocha
+theme = Monospace Dark
 
 term = xterm-256color
 cursor-style = block
-background-opacity = 0.9
+# background-opacity = 0.9
 foreground= "#868686"
 command = tmux new-session -A 
 
