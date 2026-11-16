@@ -213,16 +213,16 @@ bar {
 
 # gaps
 gaps inner 18px
-set $opacity 0.9
+# set $opacity 0.9
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
 
 # gaps
 gaps inner 0px
 
-blur enable
-blur_passes 3
-blur_radius 3
+# blur enable
+# blur_passes 3
+# blur_radius 3
 input "type:keyboard" {
     repeat_rate 50
     repeat_delay 325
