@@ -5,7 +5,8 @@ font-size = 13
 font-style = Regular
 
 # ghostty +list-themes to change theme
-theme = Monospace Dark
+# theme = Monospace Dark
+theme = Afterglow
 
 term = xterm-256color
 cursor-style = block
