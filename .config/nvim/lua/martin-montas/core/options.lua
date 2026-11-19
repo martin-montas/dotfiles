@@ -12,7 +12,7 @@ vim.api.nvim_command("syntax on")
 o.timeoutlen = 500
 o.updatetime = 200
 
-vim.cmd.colorscheme("custom")
+-- vim.cmd.colorscheme("gorgoroth")
 -- Number of screen lines to keep above and below the cursor
 o.scrolloff = 8
 
