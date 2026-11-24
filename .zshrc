@@ -80,3 +80,5 @@ eval "$(starship init zsh)"
 
 [ -f "/home/william/.ghcup/env" ] && . "/home/william/.ghcup/env" # ghcup-env
 # fastfetch
+export PATH="$HOME/bin:$PATH"
+alias r2="TERM=xterm-256color r2"

@@ -12,5 +12,5 @@ term = xterm-256color
 cursor-style = block
 # background-opacity = 1.0
 foreground= "#868686"
-command = tmux new-session -s Main
+command = tmux 
 
